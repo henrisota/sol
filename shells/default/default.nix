@@ -33,6 +33,8 @@ inputs.devenv.lib.mkShell {
           args = ["fix" "-i" ".direnv"];
         };
       };
+
+      cachix.enable = false;
     }
   ];
 }
