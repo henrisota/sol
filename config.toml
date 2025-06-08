@@ -1,6 +1,85 @@
 base_url = "localhost"
-compile_sass = true
+
+title = "sol"
+description = ""
+author = ""
+
+default_language = "en"
+
+taxonomies = []
+
 build_search_index = false
 
+generate_feeds = false
+# feed_limit = 20
+feed_filenames = ["atom.xml"]
+
+output_dir = "public"
+preserve_dotfiles_in_output = false
+ignored_content = []
+ignored_static = []
+hard_link_static = false
+
+minify_html = false
+compile_sass = true
+
+generate_sitemap = false
+exclude_paginated_pages_in_sitemap = "none"
+
+generate_robots_txt = true
+
 [markdown]
+highlight_theme = "base16-ocean-dark"
 highlight_code = false
+error_on_missing_highlight = false
+
+definition_list = false
+
+insert_anchor_links = "none"
+
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+external_links_class = ""
+
+bottom_footnotes = false
+
+render_emoji = false
+lazy_async_image = false
+smart_punctuation = false
+
+extra_syntaxes_and_themes = []
+
+[link_checker]
+skip_prefixes = [
+    "http://[2001:db8::]/",
+]
+skip_anchor_prefixes = [
+    "https://caniuse.com/",
+]
+
+internal_level = "error"
+external_level = "error"
+
+[slugify]
+paths = "safe"
+taxonomies = "on"
+anchors = "on"
+paths_keep_dates = false
+
+[search]
+index_format = "elasticlunr_javascript"
+
+include_title = true
+include_description = false
+include_date = false
+include_path = false
+include_content = true
+
+# truncate_content_length = 100
+
+[translations]
+
+[languages]
+
+[extra]
