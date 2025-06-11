@@ -31,6 +31,21 @@ in {
     markdownlint.enable = true;
     mkdocs-linkcheck.enable = true;
 
+    prettier = {
+      enable = true;
+      settings = {
+        allow-parens = "always";
+        check = false;
+        end-of-line = "lf";
+        no-config = true;
+        no-semi = false;
+        print-width = 120;
+        trailing-comma = "all";
+        use-tabs = false;
+        write = true;
+      };
+    };
+
     alejandra.enable = true;
     deadnix = {
       enable = true;
