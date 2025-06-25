@@ -39,7 +39,7 @@ in {
         end-of-line = "lf";
         no-config = true;
         no-semi = false;
-        print-width = 120;
+        print-width = 160;
         trailing-comma = "all";
         use-tabs = false;
         write = true;
