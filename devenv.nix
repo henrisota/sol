@@ -29,7 +29,7 @@ in {
 
     lychee.enable = true;
     markdownlint.enable = true;
-    mkdocs-linkcheck.enable = true;
+    mkdocs-linkcheck.enable = false;
 
     prettier = {
       enable = true;
