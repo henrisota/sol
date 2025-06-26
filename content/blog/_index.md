@@ -25,7 +25,7 @@ insert_anchor_links = "left"
 generate_feeds = true
 
 [extra]
+part = "blog"
 +++
 
-This is a static site generated with [Zola](https://www.getzola.org) using
-[Sol](https://github.com/henrisota/sol) theme.
+This is a static site generated with [Zola](https://www.getzola.org) using [Sol](https://github.com/henrisota/sol) theme.
