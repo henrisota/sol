@@ -37,14 +37,17 @@ in {
     mkdocs-linkcheck.enable = false;
 
     prettier = {
-      enable = true;
+      enable = false;
       settings = {
         allow-parens = "always";
         check = false;
+        embedded-language-formatting = "auto";
         end-of-line = "lf";
+        html-whitespace-sensitivity = "strict";
+        print-width = 160;
+        prose-wrap = "never";
         no-config = true;
         no-semi = false;
-        print-width = 160;
         trailing-comma = "all";
         use-tabs = false;
         write = true;
