@@ -25,7 +25,7 @@ insert_anchor_links = "none"
 generate_feeds = false
 
 [extra]
+part = "about"
 +++
 
-This is a static site generated with [Zola](https://www.getzola.org) using
-[Sol](https://github.com/henrisota/sol) theme.
+This is a static site generated with [Zola](https://www.getzola.org) using [Sol](https://github.com/henrisota/sol) theme.

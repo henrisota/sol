@@ -28,7 +28,12 @@ in {
     trim-trailing-whitespace.enable = true;
 
     lychee.enable = true;
-    markdownlint.enable = true;
+    markdownlint = {
+      enable = true;
+      settings.configuration = {
+        line-length = false;
+      };
+    };
     mkdocs-linkcheck.enable = false;
 
     prettier = {
