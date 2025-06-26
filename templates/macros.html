@@ -1,0 +1,41 @@
+{% macro _description() %}
+  {% if page %}
+    {% if page.summary %}
+      {% set description = page.summary %}
+    {% elif page.description %}
+      {% set description = page.description %}
+    {% endif %}
+  {% elif section %}
+    {% if section.description %}
+      {% set description = section.description %}
+    {% endif %}
+  {% else %}
+    {% set description = config.description %}
+  {% endif %}
+  {% if description %}
+    {{ description }}
+  {% endif %}
+{% endmacro description %}
+
+{%- macro description() -%}
+{{ self::_description() | trim }}
+{%- endmacro description -%}
+
+{% macro _format_date(date, omit_current_year) %}
+  {% if omit_current_year %}
+    {% set current_year = now() | date(format="%Y") %}
+    {% set date_year = date | date(format="%Y") %}
+    {% if date_year == current_year %}
+      {% set date_format = "%b %e" %}
+    {% else %}
+      {% set date_format = "%b %e, %Y" %}
+    {% endif %}
+  {% else %}
+    {% set date_format = "%b %e, %Y" %}
+  {% endif %}
+  {{ date | date(format=date_format) }}
+{% endmacro _format_date %}
+
+{%- macro format_date(date, omit_current_year=True) -%}
+{{ self::_format_date(date=date, omit_current_year=omit_current_year) | trim }}
+{%- endmacro format_date -%}
