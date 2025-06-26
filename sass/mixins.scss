@@ -1,0 +1,566 @@
+/* layout */
+@mixin inline {
+  display: inline;
+}
+
+@mixin block {
+  display: block;
+}
+
+@mixin inline-block {
+  display: inline-block;
+}
+
+@mixin flow-root {
+  display: flow-root;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: inline-flex;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin inline-grid {
+  display: inline-grid;
+}
+
+@mixin contents {
+  display: contents;
+}
+
+@mixin table {
+  display: table;
+}
+
+@mixin inline-table {
+  display: inline-table;
+}
+
+@mixin table-caption {
+  display: table-caption;
+}
+
+@mixin table-cell {
+  display: table-cell;
+}
+
+@mixin table-column {
+  display: table-column;
+}
+
+@mixin table-column-group {
+  display: table-column-group;
+}
+
+@mixin table-footer-group {
+  display: table-footer-group;
+}
+
+@mixin table-header-group {
+  display: table-header-group;
+}
+
+@mixin table-row-group {
+  display: table-row-group;
+}
+
+@mixin table-row {
+  display: table-row;
+}
+
+@mixin list-item {
+  display: list-item;
+}
+
+@mixin hidden {
+  display: none;
+}
+
+/* flexbox & grid */
+@mixin flex-row {
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-col {
+  flex-direction: column;
+}
+
+@mixin flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+@mixin grid-cols($number) {
+  grid-template-columns: repeat(#{$number}, minmax(0, 1fr));
+}
+
+@mixin grid-cols-none {
+  grid-template-columns: none;
+}
+
+@mixin grid-cols-subgrid {
+  grid-template-columns: subgrid;
+}
+
+@mixin gap($number) {
+  gap: calc(var(--spacing) * #{$number});
+}
+
+@mixin gap($row-number, $column-number) {
+  column-gap: calc(var(--spacing) * #{$column-number});
+  row-gap: calc(var(--spacing) * #{$row-number});
+}
+
+@mixin gap-x($number) {
+  column-gap: calc(var(--spacing) * #{$number});
+}
+
+@mixin gap-y($number) {
+  row-gap: calc(var(--spacing) * #{$number});
+}
+
+@mixin justify-start {
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin justify-end-safe {
+  justify-content: safe flex-end;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-center-safe {
+  justify-content: safe center;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin justify-around {
+  justify-content: space-around;
+}
+
+@mixin justify-evenly {
+  justify-content: space-evenly;
+}
+
+@mixin justify-stretch {
+  justify-content: stretch;
+}
+
+@mixin justify-baseline {
+  justify-content: baseline;
+}
+
+@mixin justify-normal {
+  justify-content: normal;
+}
+
+@mixin items-start {
+  align-items: flex-start;
+}
+
+@mixin items-end {
+  align-items: flex-end;
+}
+
+@mixin items-end-safe {
+  align-items: safe flex-end;
+}
+
+@mixin items-center {
+  align-items: center;
+}
+
+@mixin items-center-safe {
+  align-items: safe center;
+}
+
+@mixin items-baseline {
+  align-items: baseline;
+}
+
+@mixin items-baseline-last {
+  align-items: last baseline;
+}
+
+@mixin items-stretch {
+  align-items: stretch;
+}
+
+@mixin text-left {
+  text-align: left;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin text-right {
+  text-align: right;
+}
+
+@mixin text-justify {
+  text-align: justify;
+}
+
+@mixin text-start {
+  text-align: start;
+}
+
+@mixin text-end {
+  text-align: end;
+}
+
+@mixin underline {
+  text-decoration-line: underline;
+}
+
+@mixin overline {
+  text-decoration-line: overline;
+}
+
+@mixin line-through {
+  text-decoration-line: line-through;
+}
+
+@mixin no-underline {
+  text-decoration-line: none;
+}
+
+/* spacing */
+@mixin p($number) {
+  padding: calc(var(--spacing) * #{$number});
+}
+
+@mixin -p($number) {
+  padding: calc(var(--spacing) * -#{$number});
+}
+
+@mixin p-auto {
+  padding: auto;
+}
+
+@mixin p-px {
+  padding: 1px;
+}
+
+@mixin -p-px {
+  padding: -1px;
+}
+
+@mixin px($number) {
+  padding-inline: calc(var(--spacing) * #{$number});
+}
+
+@mixin -px($number) {
+  padding-inline: calc(var(--spacing) * -#{$number});
+}
+
+@mixin px-auto {
+  padding-inline: auto;
+}
+
+@mixin px-px {
+  padding-inline: 1px;
+}
+
+@mixin -px-px {
+  padding-inline: -1px;
+}
+
+@mixin py($number) {
+  padding-block: calc(var(--spacing) * #{$number});
+}
+
+@mixin -py($number) {
+  padding-block: calc(var(--spacing) * -#{$number});
+}
+
+@mixin py-auto {
+  padding-block: auto;
+}
+
+@mixin py-px {
+  padding-block: 1px;
+}
+
+@mixin -py-px {
+  padding-block: -1px;
+}
+
+@mixin pt($number) {
+  padding-top: calc(var(--spacing) * #{$number});
+}
+
+@mixin -pt($number) {
+  padding-top: calc(var(--spacing) * -#{$number});
+}
+
+@mixin pt-auto {
+  padding-top: auto;
+}
+
+@mixin pt-px {
+  padding-top: 1px;
+}
+
+@mixin -pt-px {
+  padding-top: -1px;
+}
+
+@mixin pr($number) {
+  padding-right: calc(var(--spacing) * #{$number});
+}
+
+@mixin -pr($number) {
+  padding-right: calc(var(--spacing) * -#{$number});
+}
+
+@mixin pr-auto {
+  padding-right: auto;
+}
+
+@mixin pr-px {
+  padding-right: 1px;
+}
+
+@mixin -pr-px {
+  padding-right: -1px;
+}
+
+@mixin pb($number) {
+  padding-bottom: calc(var(--spacing) * #{$number});
+}
+
+@mixin -pb($number) {
+  padding-bottom: calc(var(--spacing) * -#{$number});
+}
+
+@mixin pb-auto {
+  padding-bottom: auto;
+}
+
+@mixin pb-px {
+  padding-bottom: 1px;
+}
+
+@mixin -pb-px {
+  padding-bottom: -1px;
+}
+
+@mixin pl($number) {
+  padding-left: calc(var(--spacing) * #{$number});
+}
+
+@mixin -pl($number) {
+  padding-left: calc(var(--spacing) * -#{$number});
+}
+
+@mixin pl-auto {
+  padding-left: auto;
+}
+
+@mixin pl-px {
+  padding-left: 1px;
+}
+
+@mixin -pl-px {
+  padding-left: -1px;
+}
+
+@mixin m($number) {
+  margin: calc(var(--spacing) * #{$number});
+}
+
+@mixin -m($number) {
+  margin: calc(var(--spacing) * -#{$number});
+}
+
+@mixin m-auto {
+  margin: auto;
+}
+
+@mixin m-px {
+  margin: 1px;
+}
+
+@mixin -m-px {
+  margin: -1px;
+}
+
+@mixin mx($number) {
+  margin-inline: calc(var(--spacing) * #{$number});
+}
+
+@mixin -mx($number) {
+  margin-inline: calc(var(--spacing) * -#{$number});
+}
+
+@mixin mx-auto {
+  margin-inline: auto;
+}
+
+@mixin mx-px {
+  margin-inline: 1px;
+}
+
+@mixin -mx-px {
+  margin-inline: -1px;
+}
+
+@mixin my($number) {
+  margin-block: calc(var(--spacing) * #{$number});
+}
+
+@mixin -my($number) {
+  margin-block: calc(var(--spacing) * -#{$number});
+}
+
+@mixin my-auto {
+  margin-block: auto;
+}
+
+@mixin my-px {
+  margin-block: 1px;
+}
+
+@mixin -my-px {
+  margin-block: -1px;
+}
+
+@mixin mt($number) {
+  margin-top: calc(var(--spacing) * #{$number});
+}
+
+@mixin -mt($number) {
+  margin-top: calc(var(--spacing) * -#{$number});
+}
+
+@mixin mt-auto {
+  margin-top: auto;
+}
+
+@mixin mt-px {
+  margin-top: 1px;
+}
+
+@mixin -mt-px {
+  margin-top: -1px;
+}
+
+@mixin mr($number) {
+  margin-right: calc(var(--spacing) * #{$number});
+}
+
+@mixin -mr($number) {
+  margin-right: calc(var(--spacing) * -#{$number});
+}
+
+@mixin mr-auto {
+  margin-right: auto;
+}
+
+@mixin mr-px {
+  margin-right: 1px;
+}
+
+@mixin -mr-px {
+  margin-right: -1px;
+}
+
+@mixin mb($number) {
+  margin-bottom: calc(var(--spacing) * #{$number});
+}
+
+@mixin -mb($number) {
+  margin-bottom: calc(var(--spacing) * -#{$number});
+}
+
+@mixin mb-auto {
+  margin-bottom: auto;
+}
+
+@mixin mb-px {
+  margin-bottom: 1px;
+}
+
+@mixin -mb-px {
+  margin-bottom: -1px;
+}
+
+@mixin ml($number) {
+  margin-left: calc(var(--spacing) * #{$number});
+}
+
+@mixin -ml($number) {
+  margin-left: calc(var(--spacing) * -#{$number});
+}
+
+@mixin ml-auto {
+  margin-left: auto;
+}
+
+@mixin ml-px {
+  margin-left: 1px;
+}
+
+@mixin -ml-px {
+  margin-left: -1px;
+}
+
+@mixin space-x($number) {
+  & > :not(:last-child) {
+    margin-inline-start: calc(var(--spacing) * #{$number} * var(--space-x-reverse));
+    margin-inline-end: calc(var(--spacing) * #{$number} * calc(1 - var(--space-x-reverse)));
+  }
+}
+
+@mixin space-y($number) {
+  & > :not(:last-child) {
+    margin-block-start: calc(var(--spacing) * #{$number} * var(--space-y-reverse));
+    margin-block-end: calc(var(--spacing) * #{$number} * calc(1 - var(--space-y-reverse)));
+  }
+}
+
+/* sizing */
+@mixin width($number) {
+  width: calc(var(--spacing) * #{$number});
+}
+
+@mixin min-w($number) {
+  min-width: calc(var(--spacing) * #{$number});
+}
+
+@mixin max-w($number) {
+  max-width: calc(var(--spacing) * #{$number});
+}
+
+@mixin height($number) {
+  height: calc(var(--spacing) * #{$number});
+}
+
+@mixin min-h($number) {
+  min-height: calc(var(--spacing) * #{$number});
+}
+
+@mixin max-h($number) {
+  max-height: calc(var(--spacing) * #{$number});
+}
