@@ -1,0 +1,305 @@
+@use "variables";
+@use "theme";
+@import "mixins";
+
+body {
+  @include flex;
+  @include justify-center;
+
+  width: 100%;
+  height: 100%;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+
+  line-height: var(--line-height);
+
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+
+  color: var(--accent);
+
+  &:link {
+    color: inherit;
+  }
+
+  &:visited {
+    color: var(--accent-highlight);
+  }
+
+  &:hover {
+    @include underline;
+    color: var(--accent-highlight);
+  }
+}
+
+blockquote {
+  @include ml(0);
+  @include pl(2);
+
+  border-left: 0.2em solid var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: calc(1.75 * var(--line-height));
+
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+}
+
+img {
+  display: block;
+
+  height: auto;
+}
+
+strong {
+  font-weight: 700;
+}
+
+table {
+  th,
+  td {
+    border-color: var(--table-border);
+  }
+
+  thead,
+  tr:nth-child(even) {
+    background-color: var(--table-row);
+  }
+}
+
+table {
+  margin: 1rem auto;
+
+  text-indent: 0;
+
+  border-collapse: collapse;
+  border-color: inherit;
+  border-spacing: 0;
+}
+
+.container {
+  @include flex;
+  @include flex-col;
+
+  @include m(4);
+  @include space-y(6);
+
+  @media (min-width: variables.$small-breakpoint) {
+    width: variables.$small-breakpoint;
+  }
+}
+
+body.home .container {
+  @include justify-center;
+  @include items-center;
+}
+
+body.blog .container {
+  main {
+    @include flex;
+    @include flex-col;
+    @include space-y(4);
+
+    .posts-list {
+      @include grid;
+      grid-template-columns: auto 1fr;
+      @include gap(2, 4);
+
+      .post-item {
+        @include contents;
+
+        .date {
+          @include text-left;
+        }
+
+        .title {
+          @include text-left;
+        }
+      }
+    }
+
+    .post {
+      @include flex;
+      @include flex-col;
+      @include justify-start;
+      @include items-start;
+      @include space-y(4);
+
+      .title {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      .metadata {
+        @include flex;
+        @include flex-row;
+        @include justify-start;
+        @include items-center;
+
+        * {
+          @include px(2);
+          border-right: 1px solid;
+        }
+
+        *:first-child {
+          @include pl(0);
+        }
+
+        *:last-child {
+          @include pr(0);
+          border-right: none;
+        }
+      }
+
+      .tags {
+        @include flex;
+        @include flex-row;
+        @include justify-start;
+        @include items-center;
+        @include space-x(1);
+      }
+
+      .toc {
+        nav {
+          @include flex;
+          @include flex-col;
+          @include justify-start;
+          @include items-start;
+          @include space-y(2);
+
+          > * {
+            a {
+              &:hover {
+                color: #007bff;
+              }
+            }
+          }
+
+          .second {
+            @include pl(4);
+          }
+        }
+      }
+
+      .content {
+        @include flex;
+        @include flex-col;
+        @include justify-start;
+        @include items-start;
+        @include space-y(4);
+
+        line-height: calc(1.25 * var(--line-height));
+
+        #continue-reading {
+          @include m(0);
+        }
+      }
+    }
+  }
+
+  footer {
+    .navigation {
+      @include flex;
+      @include flex-row;
+      @include items-center;
+
+      .previous {
+        @include mr-auto;
+      }
+
+      .next {
+        @include ml-auto;
+      }
+    }
+  }
+}
+
+.header {
+  @include my(2);
+  @include space-y(6);
+
+  .information {
+    @include items-center;
+    @include space-y(1);
+
+    .name {
+      @include text-center;
+
+      font-size: 2em;
+      font-weight: 600;
+
+      * {
+        @include no-underline;
+      }
+    }
+
+    .description {
+      @include text-center;
+    }
+  }
+
+  .parts {
+    @include flex;
+    @include flex-row;
+    @include justify-center;
+    @include items-center;
+    @include space-x(3);
+
+    .part {
+      color: var(--blue);
+    }
+  }
+}
+
+.underline {
+  @include underline;
+}
+
+.icon {
+  @include flex;
+  @include justify-center;
+  @include items-center;
+
+  width: 1em;
+  height: 1em;
+
+  svg {
+    color: inherit;
+  }
+}
+
+.footnote-definition sup {
+  color: var(--secondary);
+}
+
+.footnotes {
+  border-top: 1px solid var(--table-border);
+}
+
+.footnotes-list li {
+  color: var(--secondary);
+
+  p {
+    color: var(--foreground);
+  }
+}

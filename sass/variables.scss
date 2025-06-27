@@ -1,0 +1,16 @@
+$small-breakpoint: 576px;
+
+:root {
+  --small-breakpoint: $small-breakpoint;
+
+  --spacing: 4px;
+  --space-x-reverse: 0;
+  --space-y-reverse: 0;
+
+  --line-height: 1;
+
+  --font-family: Lato, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono-font-family: Menlo, Monaco, "Courier New", monospace;
+  --font-size: 16px;
+  --font-weight: 400;
+}
