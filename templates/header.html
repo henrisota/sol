@@ -1,0 +1,24 @@
+{% import "macros.html" as macros %}
+<div class="header">
+    {% if config.extra.information %}
+    <section class="information">
+        {% if config.extra.information.name %}
+        <div class="name"><a href="{{ config.base_url | safe }}">{{ config.extra.information.name }}</a></div>
+        {% endif %}
+        {% if config.extra.information.description %}
+        <div class="description">{{ config.extra.information.description }}</div>
+        {% endif %}
+    </section>
+    {% endif %}
+    {% if config.extra.parts %}
+    <section class="parts">
+        {% for part in config.extra.parts %}
+            {% if section and section.components | first == part.path %}
+                <a class="part underline" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
+            {% else %}
+                <a class="part" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
+            {% endif %}
+        {% endfor %}
+    </section>
+    {% endif %}
+</div>
