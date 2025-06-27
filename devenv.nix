@@ -37,7 +37,7 @@ in {
     mkdocs-linkcheck.enable = false;
 
     prettier = {
-      enable = false;
+      enable = true;
       settings = {
         allow-parens = "always";
         check = false;
