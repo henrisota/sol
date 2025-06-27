@@ -1,0 +1,27 @@
+{% extends "_part.html" %}
+
+{% block content %}
+<main>
+  {{ section.content | safe }}
+  {% if section.pages %}
+  <div class="posts-list">
+    {% for page in section.pages %}
+    <div class="post-item">
+      <div class="date">{{ macros::format_date(date=page.date) }}</div>
+      <div class="title"><a href="{{ page.permalink | safe }}">{{ page.title | markdown | striptags | safe }}</a></div>
+    </div>
+    {% endfor %}
+  </div>
+  <nav class="pagination">
+    {% if paginator.previous %}
+    <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+    <a class="next" href="{{ paginator.next }}">Next ›</a>
+    {% endif %}
+  </nav>
+  {% else %}
+  <div>No posts yet.</div>
+  {% endif %}
+</main>
+{% endblock content %}
