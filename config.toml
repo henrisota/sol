@@ -86,3 +86,21 @@ include_content = true
 [languages]
 
 [extra]
+
+[extra.author]
+name = "Author"
+link = "https://wwww.example.com"
+
+[extra.information]
+name = "sol"
+keywords = ["home"]
+
+[[extra.parts]]
+name = "blog"
+path = "blog"
+keywords = ["blog"]
+
+[[extra.parts]]
+name = "about"
+path = "about"
+keywords = ["about"]
