@@ -1,0 +1,69 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="{% block language %}{{ config.default_language }}{% endblock language %}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), interest-cohort=(), microphone=()">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{{ macros::description() }}">
+    {% block keywords -%}
+    <meta name="keywords" content="{{ config.extra.information.keywords }}">
+    {%- endblock keywords %}
+
+    <meta name="author" content="{{ config.extra.author.name }}">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" co  ntent="noarchive, nocache, nofollow, noimageindex, noindex, nosnippet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+    <meta property="og:description" content="{{ macros::description() }}">
+    <meta property="og:image" content="{% if config.extra.image %}{{ get_url(path=config.extra.image) | safe }}{% endif %}">
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:title" content="{{ config.title }}">
+    <meta property="og:url" content="{{ config.base_url | safe }}">
+
+    {% if current_url -%}
+    <link rel="canonical" href="{{ current_url | safe }}">
+    {% else %}
+    <link rel="canonical" href="/404.html">
+    {% endif %}
+
+    <link rel="author" href="{{ config.extra.author.link | safe }}">
+    <link rel="icon shortcut" type="image/x-icon" href="{{ get_url(path="favicon.ico") | safe }}">
+
+    {% if config.generate_feeds %}
+        {% if config.feed_filenames %}
+            {% for feed in config.feed_filenames %}
+                {% if feed == "atom.xml" %}
+                    <link rel="alternate" type="application/atom+xml" title="atom feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
+                {% elif feed == "rss.xml" %}
+                    <link rel="alternate" type="application/rss+xml" title="rss feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
+                {% else %}
+                    <link rel="alternate" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <link rel="alternate" type="application/atom+xml" title="{{ config.title | safe }}" href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}">
+        {% endif %}
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ get_url(path='styles.css', trailing_slash=false) | safe }}">
+
+    {% block head -%}{%- endblock head %}
+</head>
+
+<body class="{% block part %}{% endblock part %}">
+    <div class="container">
+        <header>
+        {% include "header.html" %}
+        </header>
+        {% block content %}{% endblock content %}
+    </div>
+    {% block script %}{% endblock script %}
+</body>
+
+</html>

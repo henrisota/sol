@@ -1,0 +1,11 @@
+{% extends "_base.html" %}
+
+{% block part %}{{ section.extra.part }}{% endblock part %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block keywords -%}
+{% set part = config.extra.parts | filter(attribute="name", value=section.extra.part) | first %}
+{% set keywords = config.extra.information.keywords | concat(with=part.keywords) %}
+<meta name="keywords" content="{{ keywords | join(sep=",") }}">
+{%- endblock keywords %}

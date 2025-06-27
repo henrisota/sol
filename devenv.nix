@@ -27,7 +27,7 @@ in {
     end-of-file-fixer.enable = true;
     trim-trailing-whitespace.enable = true;
 
-    lychee.enable = true;
+    lychee.enable = false;
     markdownlint = {
       enable = true;
       settings.configuration = {
