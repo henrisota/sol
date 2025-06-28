@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block part %}taxonomy{% endblock part %}
+
+{% block title %}{{ term.name }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main>
+    <div class="taxonomy-redirect"><a href="{{ get_taxonomy(kind=taxonomy.name) | get(key='permalink') }}">&ShortLeftArrow; Go to index of {{ taxonomy.name | lower }}</a></div>
+    <div class="name">#{{ term.name }}</div>
+    {% if term.pages %}
+    <div class="page-list">
+        {% for page in term.pages %}
+        <div class="page-item">
+            <div class="date">{{ macros::format_date(date=page.date) }}</div>
+            <div class="title"><a href="{{ page.permalink | safe }}">{{ page.title | markdown | striptags | safe }}</a></div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif%}
+</main>
+{% endblock content %}
