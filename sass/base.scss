@@ -1,5 +1,6 @@
 @use "variables";
 @use "theme";
+@use "scrollbar";
 @import "mixins";
 
 body {
@@ -103,6 +104,9 @@ table {
 
   @include m(4);
   @include space-y(6);
+
+  // Shift content horizontally due to appearance of vertical scrollbar
+  padding-left: calc(100vw - 100%);
 
   @media (min-width: variables.$small-breakpoint) {
     width: variables.$small-breakpoint;
