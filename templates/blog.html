@@ -4,7 +4,7 @@
 <main>
   {{ section.content | safe }}
   {% if section.pages %}
-  <div class="posts-list">
+  <div class="post-list">
     {% for page in section.pages %}
     <div class="post-item">
       <div class="date">{{ macros::format_date(date=page.date) }}</div>

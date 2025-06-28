@@ -120,7 +120,7 @@ body.blog .container {
     @include flex-col;
     @include space-y(4);
 
-    .posts-list {
+    .post-list {
       @include grid;
       grid-template-columns: auto 1fr;
       @include gap(2, 4);
