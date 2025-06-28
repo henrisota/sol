@@ -1,0 +1,24 @@
+{% extends "_base.html" %}
+
+{% block part %}taxonomy{% endblock part %}
+
+{% block title %}{{ taxonomy.name }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<main>
+    <div class="name">{{ taxonomy.name | capitalize }}</div>
+    {% if terms %}
+    <div class="term-list">
+        {% for term in terms %}
+        <div class="term-item">
+            <div class="name"><a href="{{ term.permalink | safe }}">{{ term.name | lower }}</a></div>
+            {% set count = term.pages | length %}
+            <div class="count">{{ count }} page{{ count | pluralize }}</div>
+            {% set last_published_page = term.pages | sort(attribute="date") | first %}
+            <div class="last-published">{{ macros::format_date(date=last_published_page.date) }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</main>
+{% endblock content %}
