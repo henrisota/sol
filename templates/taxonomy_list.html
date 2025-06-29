@@ -15,7 +15,7 @@
             {% set count = term.pages | length %}
             <div class="count">{{ count }} page{{ count | pluralize }}</div>
             {% set last_published_page = term.pages | sort(attribute="date") | first %}
-            <div class="last-published">{{ macros::format_date(date=last_published_page.date) }}</div>
+            <div class="last-published-date">{{ macros::format_date(date=last_published_page.date) }}</div>
         </div>
         {% endfor %}
     </div>

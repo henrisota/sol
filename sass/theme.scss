@@ -1,27 +1,62 @@
 @mixin light {
-  --foreground: #222222;
-  --background: #eeeeee;
-  --secondary: #808080;
-  --tertiary: #dddddd;
-  --accent: #3d3cba;
-  --accent-highlight: #171746;
-  --table-border: #d0d0d0;
-  --table-row: #f7f7f7;
+  --base00: #eff1f5; /* Background */
+  --base01: #e6e9ef; /* Lighter Background */
+  --base02: #ccd0da; /* Selection Background */
+  --base03: #bcc0cc; /* Comments / Muted Text */
+  --base04: #acb0be; /* Darker Foreground */
+  --base05: #4c4f69; /* Foreground (Default Text) */
+  --base06: #dc8a78; /* Lighter Foreground */
+  --base07: #7287fd; /* Lightest Foreground */
+  --base08: #d20f39; /* Red (Errors, Critical Alerts) */
+  --base09: #fe640b; /* Orange (Warnings, Accents) */
+  --base0A: #df8e1d; /* Yellow (Highlights, Notices) */
+  --base0B: #40a02b; /* Green (Success, Positive Messages) */
+  --base0C: #179299; /* Cyan (Accents, Special Cases) */
+  --base0D: #1e66f5; /* Blue (Links, Informational Elements) */
+  --base0E: #8839ef; /* Magenta (Keywords, Prominent Elements) */
+  --base0F: #dd7878; /* Brown (Optional Accent Color) */
 }
 
 @mixin dark {
-  --foreground: #eeeeee;
-  --background: #161616;
-  --secondary: #999999;
-  --tertiary: #444444;
-  --accent: #959bf0;
-  --accent-highlight: #c2c5f6;
-  --table-border: var(--tertiary);
-  --table-row: #1e1e1e;
+  --base00: #1e1e2e; /* Background */
+  --base01: #181825; /* Lighter Background */
+  --base02: #313244; /* Selection Background */
+  --base03: #45475a; /* Comments / Muted Text */
+  --base04: #585b70; /* Darker Foreground */
+  --base05: #cdd6f4; /* Foreground (Default Text) */
+  --base06: #f5e0dc; /* Lighter Foreground */
+  --base07: #b4befe; /* Lightest Foreground */
+  --base08: #f38ba8; /* Red (Errors, Critical Alerts) */
+  --base09: #fab387; /* Orange (Warnings, Accents) */
+  --base0A: #f9e2af; /* Yellow (Highlights, Notices) */
+  --base0B: #a6e3a1; /* Green (Success, Positive Messages) */
+  --base0C: #94e2d5; /* Cyan (Accents, Special Cases) */
+  --base0D: #89b4fa; /* Blue (Links, Informational Elements) */
+  --base0E: #cba6f7; /* Magenta (Keywords, Prominent Elements) */
+  --base0F: #f2cdcd; /* Brown (Optional Accent Color) */
 }
 
 :root {
-  @include dark;
+  @include light;
+
+  --background: var(--base00); /* Main Background */
+  --background-light: var(--base01); /* Secondary/Lighter Background */
+  --selection-background: var(--base02); /* Selection Highlight */
+  --text-muted: var(--base03); /* Muted Text (e.g., Comments) */
+  --text-secondary: var(--base04); /* Less Prominent Text */
+  --text-primary: var(--base05); /* Default Text */
+  --text-highlight: var(--base06); /* Headings or Highlighted Text */
+  --text-strong: var(--base07); /* Strongly Highlighted Text */
+  --error: var(--base08); /* Error Messages */
+  --warning: var(--base09); /* Warnings */
+  --notice: var(--base0A); /* Notices or Special Alerts */
+  --success: var(--base0B); /* Success Messages */
+  --accent-cyan: var(--base0C); /* Cyan Accents */
+  --link: var(--base0D); /* Links */
+  --keyword: var(--base0E); /* Keywords or Prominent Items */
+  --accent-brown: var(--base0F); /* Optional Accent */
+
+  --text: var(--text-primary);
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,6 +67,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    @include light;
+    @include dark;
   }
 }
