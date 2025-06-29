@@ -21,26 +21,21 @@ body {
 
   line-height: var(--line-height);
 
-  color: var(--foreground);
+  color: var(--text-primary);
   background-color: var(--background);
 }
 
 a {
   text-decoration: none;
+  color: var(--link);
 
-  color: var(--accent);
-
-  &:link {
-    color: inherit;
-  }
-
+  &:link,
   &:visited {
-    color: var(--accent-highlight);
+    color: inherit;
   }
 
   &:hover {
     @include underline;
-    color: var(--accent-highlight);
   }
 }
 
@@ -69,6 +64,7 @@ hr {
 img {
   display: block;
 
+  max-width: 100%;
   height: auto;
 }
 
@@ -127,6 +123,7 @@ body.taxonomy {
     > .name {
       font-weight: bold;
       font-size: 1.5em;
+      color: var(--text-primary);
     }
 
     .term-list {
@@ -144,6 +141,14 @@ body.taxonomy {
         .name {
           @include text-left;
         }
+
+        .count {
+          color: var(--text-muted);
+        }
+
+        .last-published-date {
+          color: var(--text-muted);
+        }
       }
     }
 
@@ -157,6 +162,10 @@ body.taxonomy {
 
         * {
           @include text-left;
+        }
+
+        .date {
+          color: var(--text-muted);
         }
       }
     }
@@ -179,10 +188,12 @@ body.blog {
 
         .date {
           @include text-left;
+          color: var(--text-muted);
         }
 
         .title {
           @include text-left;
+          color: var(--text-primary);
         }
       }
     }
@@ -197,6 +208,7 @@ body.blog {
       .title {
         font-weight: bold;
         font-size: 1.5em;
+        color: var(--text-primary);
       }
 
       .metadata {
@@ -207,7 +219,7 @@ body.blog {
 
         * {
           @include px(2);
-          border-right: 1px solid;
+          border-right: 1px solid var(--text-muted);
         }
 
         *:first-child {
@@ -226,6 +238,8 @@ body.blog {
         @include justify-start;
         @include items-center;
         @include space-x(1);
+
+        color: var(--keyword);
       }
 
       .toc {
@@ -235,14 +249,6 @@ body.blog {
           @include justify-start;
           @include items-start;
           @include space-y(2);
-
-          > * {
-            a {
-              &:hover {
-                color: #007bff;
-              }
-            }
-          }
 
           .second {
             @include pl(4);
@@ -296,6 +302,7 @@ body.blog {
 
       font-size: 2em;
       font-weight: 600;
+      color: var(--text-primary);
 
       * {
         @include no-underline;
@@ -304,6 +311,7 @@ body.blog {
 
     .description {
       @include text-center;
+      color: var(--text-secondary);
     }
   }
 
@@ -315,13 +323,15 @@ body.blog {
     @include space-x(3);
 
     .part {
-      color: var(--blue);
+      color: var(--text-secondary);
+    }
+
+    .part.active {
+      @include underline;
+
+      color: var(--text-primary);
     }
   }
-}
-
-.underline {
-  @include underline;
 }
 
 .icon {

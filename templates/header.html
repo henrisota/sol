@@ -14,7 +14,7 @@
     <section class="parts">
         {% for part in config.extra.parts %}
             {% if section and section.components | first == part.path %}
-                <a class="part underline" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
+                <a class="part active" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
             {% else %}
                 <a class="part" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
             {% endif %}
