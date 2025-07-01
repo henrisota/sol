@@ -1,0 +1,21 @@
+@import "mixins";
+
+sup.footnote-reference {
+  color: var(--text-highlight);
+}
+
+.footnotes {
+  width: 100%;
+
+  @include pt(4);
+
+  border-top: 2px solid var(--text-muted);
+}
+
+.footnotes-list li {
+  color: var(--text-highlight);
+
+  p {
+    color: var(--text-primary);
+  }
+}
