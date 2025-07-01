@@ -1,6 +1,10 @@
 @use "variables";
 @use "theme";
+
+@use "blockquote";
 @use "scrollbar";
+@use "footnote";
+
 @import "mixins";
 
 body {
@@ -19,7 +23,7 @@ body {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
 
-  line-height: var(--line-height);
+  line-height: calc(1.25 * var(--line-height));
 
   color: var(--text-primary);
   background-color: var(--background);
@@ -39,26 +43,21 @@ a {
   }
 }
 
-blockquote {
-  @include ml(0);
-  @include pl(2);
-
-  border-left: 0.2em solid var(--secondary);
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: calc(1.75 * var(--line-height));
-
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 hr {
+  width: 100%;
+  height: 2px;
   border: none;
+  background-color: var(--text-muted);
 }
 
 img {
@@ -70,28 +69,11 @@ img {
 
 strong {
   font-weight: 700;
+  color: var(--text-strong);
 }
 
-table {
-  th,
-  td {
-    border-color: var(--table-border);
-  }
-
-  thead,
-  tr:nth-child(even) {
-    background-color: var(--table-row);
-  }
-}
-
-table {
-  margin: 1rem auto;
-
-  text-indent: 0;
-
-  border-collapse: collapse;
-  border-color: inherit;
-  border-spacing: 0;
+::selection {
+  background: var(--selection-background);
 }
 
 .container {
@@ -263,7 +245,7 @@ body.blog {
         @include items-start;
         @include space-y(4);
 
-        line-height: calc(1.25 * var(--line-height));
+        line-height: calc(2 * var(--line-height));
 
         #continue-reading {
           @include m(0);
@@ -344,21 +326,5 @@ body.blog {
 
   svg {
     color: inherit;
-  }
-}
-
-.footnote-definition sup {
-  color: var(--secondary);
-}
-
-.footnotes {
-  border-top: 1px solid var(--table-border);
-}
-
-.footnotes-list li {
-  color: var(--secondary);
-
-  p {
-    color: var(--foreground);
   }
 }
