@@ -10,9 +10,8 @@
 body {
   @include flex;
   @include justify-center;
-
-  width: 100%;
-  height: 100%;
+  @include max-w-full;
+  @include max-h-full;
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -54,17 +53,16 @@ h6 {
 }
 
 hr {
-  width: 100%;
+  @include max-w-full;
   height: 2px;
   border: none;
   background-color: var(--text-muted);
 }
 
 img {
-  display: block;
-
-  max-width: 100%;
-  height: auto;
+  @include block;
+  @include max-w-full;
+  @include h-auto;
 }
 
 strong {
