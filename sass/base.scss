@@ -10,8 +10,8 @@
 body {
   @include flex;
   @include justify-center;
-  @include max-w-full;
-  @include max-h-full;
+  @include w-full;
+  @include h-full;
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -53,7 +53,7 @@ h6 {
 }
 
 hr {
-  @include max-w-full;
+  @include w-full;
   height: 2px;
   border: none;
   background-color: var(--text-muted);
@@ -61,7 +61,7 @@ hr {
 
 img {
   @include block;
-  @include max-w-full;
+  @include w-full;
   @include h-auto;
 }
 

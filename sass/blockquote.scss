@@ -3,7 +3,7 @@
 blockquote {
   @include flex;
   @include flex-col;
-  @include max-w-full;
+  @include w-full;
   @include space-y(2);
   @include p(4);
 
