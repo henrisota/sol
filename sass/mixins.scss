@@ -541,26 +541,218 @@
 }
 
 /* sizing */
-@mixin width($number) {
+@mixin w-n($number) {
   width: calc(var(--spacing) * #{$number});
 }
 
-@mixin min-w($number) {
+@mixin w-f($fraction) {
+  width: calc(#{fraction} * 100%);
+}
+
+@mixin w-auto() {
+  width: auto;
+}
+
+@mixin w-px() {
+  width: 1px;
+}
+
+@mixin w-full() {
+  width: 100%;
+}
+
+@mixin w-screen() {
+  width: 100vw;
+}
+
+@mixin w-min() {
+  width: min-content;
+}
+
+@mixin w-max() {
+  width: max-content;
+}
+
+@mixin w-fit() {
+  width: fit-content;
+}
+
+@mixin min-w-n($number) {
   min-width: calc(var(--spacing) * #{$number});
 }
 
-@mixin max-w($number) {
+@mixin min-w-f($fraction) {
+  min-width: calc(#{fraction} * 100%);
+}
+
+@mixin min-w-auto() {
+  min-width: auto;
+}
+
+@mixin min-w-px() {
+  min-width: 1px;
+}
+
+@mixin min-w-full() {
+  min-width: 100%;
+}
+
+@mixin min-w-screen() {
+  min-width: 100vw;
+}
+
+@mixin min-w-min() {
+  min-width: min-content;
+}
+
+@mixin min-w-max() {
+  min-width: max-content;
+}
+
+@mixin min-w-fit() {
+  min-width: fit-content;
+}
+
+@mixin max-w-n($number) {
   max-width: calc(var(--spacing) * #{$number});
 }
 
-@mixin height($number) {
+@mixin max-w-f($fraction) {
+  max-width: calc(#{fraction} * 100%);
+}
+
+@mixin max-w-auto() {
+  max-width: auto;
+}
+
+@mixin max-w-px() {
+  max-width: 1px;
+}
+
+@mixin max-w-full() {
+  max-width: 100%;
+}
+
+@mixin max-w-screen() {
+  max-width: 100vw;
+}
+
+@mixin max-w-min() {
+  max-width: min-content;
+}
+
+@mixin max-w-max() {
+  max-width: max-content;
+}
+
+@mixin max-w-fit() {
+  max-width: fit-content;
+}
+
+@mixin h-n($number) {
   height: calc(var(--spacing) * #{$number});
 }
 
-@mixin min-h($number) {
+@mixin h-f($fraction) {
+  height: calc(#{fraction} * 100%);
+}
+
+@mixin h-auto() {
+  height: auto;
+}
+
+@mixin h-px() {
+  height: 1px;
+}
+
+@mixin h-full() {
+  height: 100%;
+}
+
+@mixin h-screen() {
+  height: 100vw;
+}
+
+@mixin h-min() {
+  height: min-content;
+}
+
+@mixin h-max() {
+  height: max-content;
+}
+
+@mixin h-fit() {
+  height: fit-content;
+}
+
+@mixin min-h-n($number) {
   min-height: calc(var(--spacing) * #{$number});
 }
 
-@mixin max-h($number) {
+@mixin min-h-f($fraction) {
+  min-height: calc(#{fraction} * 100%);
+}
+
+@mixin min-h-auto() {
+  min-height: auto;
+}
+
+@mixin min-h-px() {
+  min-height: 1px;
+}
+
+@mixin min-h-full() {
+  min-height: 100%;
+}
+
+@mixin min-h-screen() {
+  min-height: 100vw;
+}
+
+@mixin min-h-min() {
+  min-height: min-content;
+}
+
+@mixin min-h-max() {
+  min-height: max-content;
+}
+
+@mixin min-h-fit() {
+  min-height: fit-content;
+}
+
+@mixin max-h-n($number) {
   max-height: calc(var(--spacing) * #{$number});
+}
+
+@mixin max-h-f($fraction) {
+  max-height: calc(#{fraction} * 100%);
+}
+
+@mixin max-h-auto() {
+  max-height: auto;
+}
+
+@mixin max-h-px() {
+  max-height: 1px;
+}
+
+@mixin max-h-full() {
+  max-height: 100%;
+}
+
+@mixin max-h-screen() {
+  max-height: 100vw;
+}
+
+@mixin max-h-min() {
+  max-height: min-content;
+}
+
+@mixin max-h-max() {
+  max-height: max-content;
+}
+
+@mixin max-h-fit() {
+  max-height: fit-content;
 }

@@ -5,8 +5,7 @@ sup.footnote-reference {
 }
 
 .footnotes {
-  width: 100%;
-
+  @include max-w-full;
   @include pt(4);
 
   border-top: 2px solid var(--text-muted);

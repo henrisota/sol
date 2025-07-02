@@ -3,10 +3,9 @@
 blockquote {
   @include flex;
   @include flex-col;
+  @include max-w-full;
   @include space-y(2);
   @include p(4);
-
-  width: 100%;
 
   border-left: 0.4em solid var(--text-muted);
   background-color: var(--background-light);
