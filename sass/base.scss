@@ -3,6 +3,7 @@
 
 @use "blockquote";
 @use "scrollbar";
+@use "code";
 @use "footnote";
 
 @import "mixins";
@@ -29,6 +30,8 @@ body {
 }
 
 a {
+  word-break: break-all;
+
   text-decoration: none;
   color: var(--link);
 
@@ -67,6 +70,8 @@ img {
 
 p {
   @include w-full;
+
+  hyphens: auto;
 }
 
 strong {
@@ -80,6 +85,9 @@ strong {
 .container {
   @include flex;
   @include flex-col;
+  @include w-full;
+
+  box-sizing: border-box;
 
   @include m(4);
   @include space-y(6);
@@ -242,6 +250,8 @@ body.blog {
       .content {
         @include flex;
         @include flex-col;
+        @include w-full;
+        @include min-w-n(0);
         @include justify-start;
         @include items-start;
         @include space-y(4);
