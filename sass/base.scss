@@ -14,20 +14,20 @@ body {
   @include justify-center;
   @include w-full;
   @include h-full;
+  @include text-base;
+
+  background-color: var(--background);
+
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+
+  color: var(--text-primary);
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
   -webkit-font-smoothing: subpixel-antialiased;
-
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-
-  line-height: calc(1.25 * var(--line-height));
-
-  color: var(--text-primary);
-  background-color: var(--background);
 }
 
 a {
@@ -53,7 +53,30 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  color: var(--text-primary);
+}
+
+h1 {
+  @include text-2xl;
+}
+
+h2 {
+  @include text-xl;
+}
+
+h3 {
+  @include text-lg;
+}
+
+h4 {
+  @include text-base;
+}
+
+h5 {
+  @include text-sm;
+}
+
+h6 {
+  @include text-xs;
 }
 
 hr {
@@ -132,9 +155,8 @@ body.taxonomy {
     @include space-y(4);
 
     > .name {
+      @include text-2xl;
       font-weight: bold;
-      font-size: 1.5em;
-      color: var(--text-primary);
     }
 
     .term-list {
@@ -204,7 +226,6 @@ body.blog {
 
         .title {
           @include text-left;
-          color: var(--text-primary);
         }
       }
     }
@@ -217,9 +238,8 @@ body.blog {
       @include space-y(4);
 
       .title {
+        @include text-2xl;
         font-weight: bold;
-        font-size: 1.5em;
-        color: var(--text-primary);
       }
 
       .metadata {
@@ -312,10 +332,8 @@ body.blog {
 
     .name {
       @include text-center;
-
-      font-size: 2em;
+      font-size: 2rem;
       font-weight: 600;
-      color: var(--text-primary);
 
       * {
         @include no-underline;
@@ -341,7 +359,6 @@ body.blog {
 
     .part.active {
       @include underline;
-
       color: var(--text-primary);
     }
   }
