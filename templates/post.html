@@ -62,14 +62,14 @@
 </main>
 <footer>
     {% if page.lower or page.higher %}
-    <div class="navigation">
+    <nav>
         {% if page.lower %}
         <div class="previous"><a href="{{ page.lower.permalink | safe }}">&lsaquo; {{ page.lower.title }}</a></div>
         {% endif %}
         {% if page.higher %}
         <div class="next"><a class="next" href="{{ page.higher.permalink | safe }}">{{ page.higher.title }} &rsaquo;</a></div>
         {% endif %}
-    </div>
+    </nav>
     {% endif %}
 </footer>
 {% endblock content %}
