@@ -1,0 +1,14 @@
+@import "mixins";
+
+ol,
+ul {
+  @include w-full;
+  @include items-start;
+
+  list-style-position: inside;
+
+  ol,
+  ul {
+    @include ml(6);
+  }
+}
