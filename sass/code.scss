@@ -8,6 +8,8 @@ code {
 }
 
 code {
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
   vertical-align: baseline;
 }
 
@@ -17,4 +19,8 @@ pre {
   @include p(4);
 
   overflow-x: auto;
+
+  code {
+    @include p(0);
+  }
 }
