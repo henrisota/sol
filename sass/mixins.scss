@@ -549,31 +549,31 @@
   width: calc(#{fraction} * 100%);
 }
 
-@mixin w-auto() {
+@mixin w-auto {
   width: auto;
 }
 
-@mixin w-px() {
+@mixin w-px {
   width: 1px;
 }
 
-@mixin w-full() {
+@mixin w-full {
   width: 100%;
 }
 
-@mixin w-screen() {
+@mixin w-screen {
   width: 100vw;
 }
 
-@mixin w-min() {
+@mixin w-min {
   width: min-content;
 }
 
-@mixin w-max() {
+@mixin w-max {
   width: max-content;
 }
 
-@mixin w-fit() {
+@mixin w-fit {
   width: fit-content;
 }
 
@@ -585,31 +585,31 @@
   min-width: calc(#{fraction} * 100%);
 }
 
-@mixin min-w-auto() {
+@mixin min-w-auto {
   min-width: auto;
 }
 
-@mixin min-w-px() {
+@mixin min-w-px {
   min-width: 1px;
 }
 
-@mixin min-w-full() {
+@mixin min-w-full {
   min-width: 100%;
 }
 
-@mixin min-w-screen() {
+@mixin min-w-screen {
   min-width: 100vw;
 }
 
-@mixin min-w-min() {
+@mixin min-w-min {
   min-width: min-content;
 }
 
-@mixin min-w-max() {
+@mixin min-w-max {
   min-width: max-content;
 }
 
-@mixin min-w-fit() {
+@mixin min-w-fit {
   min-width: fit-content;
 }
 
@@ -621,31 +621,31 @@
   max-width: calc(#{fraction} * 100%);
 }
 
-@mixin max-w-auto() {
+@mixin max-w-auto {
   max-width: auto;
 }
 
-@mixin max-w-px() {
+@mixin max-w-px {
   max-width: 1px;
 }
 
-@mixin max-w-full() {
+@mixin max-w-full {
   max-width: 100%;
 }
 
-@mixin max-w-screen() {
+@mixin max-w-screen {
   max-width: 100vw;
 }
 
-@mixin max-w-min() {
+@mixin max-w-min {
   max-width: min-content;
 }
 
-@mixin max-w-max() {
+@mixin max-w-max {
   max-width: max-content;
 }
 
-@mixin max-w-fit() {
+@mixin max-w-fit {
   max-width: fit-content;
 }
 
@@ -657,31 +657,31 @@
   height: calc(#{fraction} * 100%);
 }
 
-@mixin h-auto() {
+@mixin h-auto {
   height: auto;
 }
 
-@mixin h-px() {
+@mixin h-px {
   height: 1px;
 }
 
-@mixin h-full() {
+@mixin h-full {
   height: 100%;
 }
 
-@mixin h-screen() {
+@mixin h-screen {
   height: 100vw;
 }
 
-@mixin h-min() {
+@mixin h-min {
   height: min-content;
 }
 
-@mixin h-max() {
+@mixin h-max {
   height: max-content;
 }
 
-@mixin h-fit() {
+@mixin h-fit {
   height: fit-content;
 }
 
@@ -693,31 +693,31 @@
   min-height: calc(#{fraction} * 100%);
 }
 
-@mixin min-h-auto() {
+@mixin min-h-auto {
   min-height: auto;
 }
 
-@mixin min-h-px() {
+@mixin min-h-px {
   min-height: 1px;
 }
 
-@mixin min-h-full() {
+@mixin min-h-full {
   min-height: 100%;
 }
 
-@mixin min-h-screen() {
+@mixin min-h-screen {
   min-height: 100vw;
 }
 
-@mixin min-h-min() {
+@mixin min-h-min {
   min-height: min-content;
 }
 
-@mixin min-h-max() {
+@mixin min-h-max {
   min-height: max-content;
 }
 
-@mixin min-h-fit() {
+@mixin min-h-fit {
   min-height: fit-content;
 }
 
@@ -729,30 +729,43 @@
   max-height: calc(#{fraction} * 100%);
 }
 
-@mixin max-h-auto() {
+@mixin max-h-auto {
   max-height: auto;
 }
 
-@mixin max-h-px() {
+@mixin max-h-px {
   max-height: 1px;
 }
 
-@mixin max-h-full() {
+@mixin max-h-full {
   max-height: 100%;
 }
 
-@mixin max-h-screen() {
+@mixin max-h-screen {
   max-height: 100vw;
 }
 
-@mixin max-h-min() {
+@mixin max-h-min {
   max-height: min-content;
 }
 
-@mixin max-h-max() {
+@mixin max-h-max {
   max-height: max-content;
 }
 
-@mixin max-h-fit() {
+@mixin max-h-fit {
   max-height: fit-content;
+}
+
+/* backgrounds */
+@mixin bg-inherit {
+  background-color: inherit;
+}
+
+@mixin bg-current {
+  background-color: currentColor;
+}
+
+@mixin bg-transparent {
+  background-color: transparent;
 }
