@@ -13,7 +13,7 @@
         {% for page in term.pages %}
         <div class="page-item">
             <div class="date">{{ macros::format_date(date=page.date) }}</div>
-            <div class="title"><a href="{{ page.permalink | safe }}">{{ page.title | markdown | striptags | safe }}</a></div>
+            <div class="title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
         </div>
         {% endfor %}
     </div>
