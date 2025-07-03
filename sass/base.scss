@@ -286,7 +286,7 @@ body.blog {
   }
 
   footer {
-    .navigation {
+    nav {
       @include flex;
       @include flex-row;
       @include items-center;
