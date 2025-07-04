@@ -50,6 +50,12 @@ _Italic Text_: Use `*text*` or `_text_`.
 1. First item
 2. Second item
 3. Third Item
+4. Fourth Item
+5. Fifth Item
+6. Sixth Item
+7. Seventh Item
+8. Eight Item
+9. Ninth Item
 
 #### Unordered Lists
 

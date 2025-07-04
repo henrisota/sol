@@ -12,9 +12,14 @@ sup.footnote-reference {
 }
 
 .footnotes-list li {
+  @include w-full;
+
+  list-style-position: inside;
   color: var(--text-highlight);
 
   p {
+    @include inline;
+
     color: var(--text-primary);
   }
 }
