@@ -32,6 +32,8 @@ in {
       enable = true;
       settings.configuration = {
         line-length = false;
+        no-blanks-blockquote = false;
+        single-title = false;
       };
     };
     mkdocs-linkcheck.enable = false;

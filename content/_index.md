@@ -25,4 +25,5 @@ insert_anchor_links = "none"
 generate_feeds = false
 
 [extra]
+part = ""
 +++

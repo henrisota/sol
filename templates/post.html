@@ -19,7 +19,7 @@
 {% block content %}
 <main>
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="title" itemprop="name headline">{{ page.title | markdown | striptags | safe }}</div>
+        <div class="title" itemprop="name headline">{{ page.title }}</div>
         <div class="metadata">
             {% if page.date %}
             <time datetime="{{ page.date | date(format="%+") }}" itemprop="datePublished">Published on {{ macros::format_date(date=page.date) }}</time>
@@ -53,21 +53,23 @@
             </nav>
         </div>
         {% endif %}
+        <hr>
         <div class="content" itemprop="articleBody">
             {{ page.content | safe }}
         </div>
+        <hr>
     </article>
 </main>
 <footer>
     {% if page.lower or page.higher %}
-    <div class="navigation">
+    <nav>
         {% if page.lower %}
         <div class="previous"><a href="{{ page.lower.permalink | safe }}">&lsaquo; {{ page.lower.title }}</a></div>
         {% endif %}
         {% if page.higher %}
         <div class="next"><a class="next" href="{{ page.higher.permalink | safe }}">{{ page.higher.title }} &rsaquo;</a></div>
         {% endif %}
-    </div>
+    </nav>
     {% endif %}
 </footer>
 {% endblock content %}

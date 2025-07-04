@@ -1,0 +1,26 @@
+@import "mixins";
+
+pre,
+code {
+  background-color: var(--background-light);
+  font-family: var(--mono-font-family);
+  font-size: var(--font-size);
+}
+
+code {
+  padding: 0.25em 0.25em;
+  border-radius: 0.25em;
+  vertical-align: baseline;
+}
+
+pre {
+  @include block;
+  @include w-full;
+  @include p(4);
+
+  overflow-x: auto;
+
+  code {
+    @include p(0);
+  }
+}
