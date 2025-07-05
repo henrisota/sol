@@ -1,7 +1,7 @@
 @import "mixins";
 
 sup.footnote-reference {
-  color: var(--text-highlight);
+  color: var(--text-secondary);
 }
 
 .footnotes {
@@ -15,7 +15,7 @@ sup.footnote-reference {
   @include w-full;
 
   list-style-position: inside;
-  color: var(--text-highlight);
+  color: var(--text-secondary);
 
   p {
     @include inline;

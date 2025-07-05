@@ -35,7 +35,7 @@
             {% set tags = page.taxonomies.tags | sort %}
             {% for tag in page.taxonomies.tags %}
                 {% set tag_slugify = tag | slugify %}
-                <div class="tag"><a href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}">#{{ tag }}</a></div>
+                <div class="tag"><a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}">#{{ tag }}</a></div>
             {% endfor %}
         </div>
         {% endif %}
@@ -64,7 +64,7 @@
     {% if page.lower or page.higher %}
     <nav>
         {% if page.lower %}
-        <div class="previous"><a href="{{ page.lower.permalink | safe }}">&lsaquo; {{ page.lower.title }}</a></div>
+        <div class="previous"><a class="previous" href="{{ page.lower.permalink | safe }}">&lsaquo; {{ page.lower.title }}</a></div>
         {% endif %}
         {% if page.higher %}
         <div class="next"><a class="next" href="{{ page.higher.permalink | safe }}">{{ page.higher.title }} &rsaquo;</a></div>
