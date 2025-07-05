@@ -132,7 +132,8 @@ strong {
   @include space-y(6);
 
   // Shift content horizontally due to appearance of vertical scrollbar
-  padding-left: calc(100vw - 100%);
+  padding-left: calc(100vw - 100% + 2 * var(--spacing));
+  padding-right: calc(2 * var(--spacing));
 
   @include mq(sm) {
     width: variables.$sm-breakpoint;
