@@ -1,0 +1,15 @@
+@use "variables";
+
+$breakpoints: (
+  "sm": "screen and (min-width:#{variables.$sm-breakpoint})",
+  "md": "screen and (min-width:#{variables.$md-breakpoint})",
+  "lg": "screen and (min-width:#{variables.$lg-breakpoint})",
+  "xl": "screen and (min-width:#{variables.$xl-breakpoint})",
+  "xxl": "screen and (min-width:#{variables.$xxl-breakpoint})",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

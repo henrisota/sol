@@ -8,6 +8,7 @@
 @use "scrollbar";
 
 @import "mixins";
+@import "breakpoint";
 
 body {
   @include flex;
@@ -133,8 +134,12 @@ strong {
   // Shift content horizontally due to appearance of vertical scrollbar
   padding-left: calc(100vw - 100%);
 
-  @media (min-width: variables.$small-breakpoint) {
-    width: variables.$small-breakpoint;
+  @include mq(sm) {
+    width: variables.$sm-breakpoint;
+  }
+
+  @include mq(md) {
+    width: variables.$md-breakpoint;
   }
 }
 
@@ -361,9 +366,8 @@ body.blog {
   @include flex;
   @include justify-center;
   @include items-center;
-
-  width: 1em;
-  height: 1em;
+  @include w-n(4);
+  @include h-n(4);
 
   svg {
     color: inherit;

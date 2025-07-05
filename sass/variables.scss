@@ -1,7 +1,15 @@
-$small-breakpoint: 576px;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$xxl-breakpoint: 1400px;
 
 :root {
-  --small-breakpoint: $small-breakpoint;
+  --sm-breakpoint: $sm-breakpoint;
+  --md-breakpoint: $md-breakpoint;
+  --lg-breakpoint: $lg-breakpoint;
+  --xl-breakpoint: $xl-breakpoint;
+  --xxl-breakpoint: $xxl-breakpoint;
 
   --spacing: 4px;
   --space-x-reverse: 0;
