@@ -6,7 +6,7 @@
 
 {% block content %}
 <main>
-    <div class="taxonomy-redirect"><a href="{{ get_taxonomy(kind=taxonomy.name) | get(key='permalink') }}">&ShortLeftArrow; Index of {{ taxonomy.name | lower }}</a></div>
+    <div class="taxonomy-redirect"><a href="{{ get_taxonomy(kind=taxonomy.name) | get(key='permalink') }}">&lsaquo; Index of {{ taxonomy.name | lower }}</a></div>
     <div class="name">#{{ term.name }}</div>
     {% if term.pages %}
     <div class="page-list">
