@@ -33,13 +33,8 @@ body {
 a {
   word-break: break-all;
 
-  text-decoration: none;
+  @include no-underline;
   color: var(--link);
-
-  &:link,
-  &:visited {
-    color: inherit;
-  }
 
   &:hover {
     @include underline;
@@ -269,8 +264,6 @@ body.blog {
         @include justify-start;
         @include items-center;
         @include space-x(1);
-
-        color: var(--keyword);
       }
 
       .toc {
