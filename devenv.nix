@@ -16,7 +16,7 @@ in {
       rm -rf ${outputDirectory}
     '';
     serve.exec = ''
-      zola serve --interface 0.0.0.0 --port 2000 --base-url 0.0.0.0 --open
+      zola serve --interface 127.0.0.1 --port 2000 --open
     '';
   };
 
