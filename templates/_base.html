@@ -56,13 +56,14 @@
     {% block head -%}{%- endblock head %}
 </head>
 
-<body class="{% block part %}{% endblock part %}">
+<body class="{% block part %}{% endblock part %}" data-instant-intensity="viewport-all">
     <div class="container">
         <header>
         {% include "header.html" %}
         </header>
         {% block content %}{% endblock content %}
     </div>
+    <script src="{{ get_url(path="instantpage.min.js") | safe }}" type="module" defer></script>
     {% block script %}{% endblock script %}
 </body>
 
