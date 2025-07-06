@@ -32,8 +32,12 @@ exclude_paginated_pages_in_sitemap = "none"
 generate_robots_txt = true
 
 [markdown]
-highlight_theme = "base16-ocean-dark"
-highlight_code = false
+highlight_theme = "css"
+highlight_themes_css = [
+    { theme = "catppuccin-mocha", filename = "syntax-theme-dark.css"},
+    { theme = "catppuccin-latte", filename = "syntax-theme-light.css"},
+]
+highlight_code = true
 error_on_missing_highlight = false
 
 definition_list = false
@@ -51,7 +55,9 @@ render_emoji = false
 lazy_async_image = false
 smart_punctuation = false
 
-extra_syntaxes_and_themes = []
+extra_syntaxes_and_themes = [
+    "highlight_themes"
+]
 
 [link_checker]
 skip_prefixes = [
