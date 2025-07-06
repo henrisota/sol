@@ -21,7 +21,7 @@
 {{ self::_description() | trim }}
 {%- endmacro description -%}
 
-{% macro _format_date(date, omit_current_year) %}
+{% macro _format_date(date, timezone, omit_current_year) %}
   {% if omit_current_year %}
     {% set current_year = now() | date(format="%Y") %}
     {% set date_year = date | date(format="%Y") %}
@@ -33,9 +33,19 @@
   {% else %}
     {% set date_format = "%b %e, %Y" %}
   {% endif %}
-  {{ date | date(format=date_format) }}
+  {{ date | date(format=date_format, timezone=timezone) }}
 {% endmacro _format_date %}
 
-{%- macro format_date(date, omit_current_year=True) -%}
-{{ self::_format_date(date=date, omit_current_year=omit_current_year) | trim }}
+{%- macro format_date(date, timezone="", omit_current_year=True) -%}
+{% if timezone == "" %}{% set timezone = config.extra.timezone | default(value="Etc/UTC") %}{% endif %}
+{{ self::_format_date(date=date, timezone=timezone, omit_current_year=omit_current_year) | trim }}
 {%- endmacro format_date -%}
+
+{% macro _datetime(date, timezone) %}
+  {{ date | date(format="%+", timezone=timezone) }}
+{% endmacro _datetime %}
+
+{%- macro datetime(date, timezone="") %}
+  {% if timezone == "" %}{% set timezone = config.extra.timezone | default(value="Etc/UTC") %}{% endif %}
+  {{ self::_datetime(date=date, timezone=timezone) | trim }}
+{%- endmacro datetime -%}

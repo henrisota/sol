@@ -86,6 +86,7 @@ include_content = true
 [languages]
 
 [extra]
+timezone = "Europe/Berlin"
 
 [extra.author]
 name = "Author"
