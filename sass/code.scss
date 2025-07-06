@@ -16,11 +16,75 @@ code {
 pre {
   @include block;
   @include w-full;
-  @include p(4);
+  @include py(4);
 
   overflow-x: auto;
 
-  code {
-    @include p(0);
+  &[data-name]::before {
+    @include block;
+    @include px(4);
+    @include font-bold;
+
+    content: "> " attr(data-name);
+    color: var(--text-primary);
   }
+
+  code {
+    @include block;
+    @include py(0);
+    @include px(4);
+
+    &:has(> mark, > span) {
+      @include pl(2);
+      @include pr(4);
+    }
+
+    > mark,
+    > span {
+      @include px(2);
+    }
+  }
+
+  mark {
+    @include block;
+    background-color: var(--background);
+  }
+
+  table {
+    @include w-full;
+
+    border: none;
+    border-collapse: collapse;
+
+    td {
+      @include p(0);
+      border: none;
+
+      &:nth-of-type(1) {
+        @include w-px;
+        @include text-right;
+        @include pr(2);
+        white-space: nowrap;
+        user-select: none;
+
+        mark {
+          background-color: var(--background-light);
+          color: var(--text-primary);
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include text-left;
+
+        > mark,
+        > span {
+          @include pl(2);
+        }
+      }
+    }
+  }
+}
+
+.z-code {
+  background-color: var(--background-light);
 }
