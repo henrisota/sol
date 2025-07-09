@@ -361,16 +361,21 @@ body.blog {
       color: var(--text-primary);
     }
   }
+
+  #mode #toggle {
+    @include flex;
+    @include flex-col;
+    @include justify-center;
+    @include items-center;
+    @include w-n(4);
+    @include h-n(4);
+
+    cursor: pointer;
+    color: var(--text-primary);
+  }
 }
 
 .icon {
-  @include flex;
-  @include justify-center;
-  @include items-center;
   @include w-n(4);
   @include h-n(4);
-
-  svg {
-    color: inherit;
-  }
 }
