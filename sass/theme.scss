@@ -40,8 +40,6 @@
 }
 
 :root {
-  @include light;
-
   --background: var(--base00); /* Main Background */
   --background-light: var(--base01); /* Secondary/Lighter Background */
   --selection-background: var(--base02); /* Selection Highlight */
@@ -60,6 +58,14 @@
   --accent-brown: var(--base0F); /* Optional Accent */
 
   --text: var(--text-primary);
+
+  &.light {
+    @include light;
+  }
+
+  &.dark {
+    @include dark;
+  }
 }
 
 @media (prefers-color-scheme: light) {

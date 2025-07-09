@@ -63,6 +63,7 @@
         </header>
         {% block content %}{% endblock content %}
     </div>
+    <script src="{{ get_url(path="main.js") | safe }}" type="module" defer></script>
     <script src="{{ get_url(path="instantpage.min.js") | safe }}" type="module" defer></script>
     {% block script %}{% endblock script %}
 </body>
