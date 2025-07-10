@@ -4,12 +4,12 @@ class ModeConfigurator {
 
   constructor() {
     this.modeElement = document.getElementById("mode");
-    this.toggleElement = this.modeElement.querySelector("#toggle");
+    this.toggleElement = document.querySelector("#toggle");
     this.iconElement = this.toggleElement.querySelector(".icon");
 
-    this.setMode(this.getMode());
-
     this.toggleElement.addEventListener("click", () => this.toggleMode());
+
+    this.setMode(this.getMode());
   }
 
   getMode() {
@@ -23,18 +23,21 @@ class ModeConfigurator {
     return mode;
   }
 
-  toggleMode() {
+  async toggleMode() {
     const modeIndex = this.modes.indexOf(this.getMode());
     const mode = this.modes[(modeIndex + 1) % this.modes.length];
-    this.setMode(mode);
+    await this.setMode(mode);
   }
 
   async sync() {
     const current = this.getMode();
-    const source = this.toggleElement.dataset[current];
+    const source = this.modeElement.dataset[current];
 
     if (!this.cache[source]) {
       const response = await fetch(source);
+      if (!response.ok) {
+        return;
+      }
       this.cache[source] = await response.text();
     }
 
