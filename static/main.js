@@ -7,6 +7,9 @@ class ModeConfigurator {
     this.toggleElement = document.querySelector("#toggle");
     this.iconElement = this.toggleElement.querySelector(".icon");
 
+    this.lightSyntax = document.querySelector("#light-syntax");
+    this.darkSyntax = document.querySelector("#dark-syntax");
+
     this.toggleElement.addEventListener("click", () => this.toggleMode());
 
     this.setMode(this.getMode());
@@ -48,6 +51,9 @@ class ModeConfigurator {
 
     document.documentElement.classList.remove(mode == "dark" ? "light" : "dark", mode);
     document.documentElement.classList.add(mode);
+
+    this.darkSyntax.media = mode === "light" ? "not all" : "all";
+    this.lightSyntax.media = mode === "light" ? "all" : "not all";
   }
 }
 
