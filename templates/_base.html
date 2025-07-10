@@ -38,9 +38,9 @@
     {% if config.generate_feeds %}
         {% if config.feed_filenames %}
             {% for feed in config.feed_filenames %}
-                {% if feed == "atom.xml" %}
+                {% if feed is containing("atom") %}
                     <link rel="alternate" type="application/atom+xml" title="atom feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
-                {% elif feed == "rss.xml" %}
+                {% elif feed is containing("rss") %}
                     <link rel="alternate" type="application/rss+xml" title="rss feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
                 {% else %}
                     <link rel="alternate" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
