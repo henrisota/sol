@@ -362,16 +362,22 @@ body.blog {
     }
   }
 
-  #mode #toggle {
-    @include flex;
-    @include flex-col;
-    @include justify-center;
-    @include items-center;
-    @include w-n(4);
-    @include h-n(4);
+  #mode {
+    @include absolute;
+    @include top-n(4);
+    @include right-n(4);
 
-    cursor: pointer;
-    color: var(--text-primary);
+    #toggle {
+      @include flex;
+      @include flex-col;
+      @include justify-center;
+      @include items-center;
+      @include w-n(4);
+      @include h-n(4);
+
+      cursor: pointer;
+      color: var(--text-primary);
+    }
   }
 }
 
