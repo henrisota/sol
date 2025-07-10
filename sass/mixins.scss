@@ -83,6 +83,42 @@
   display: none;
 }
 
+@mixin static {
+  position: static;
+}
+
+@mixin fixed {
+  position: fixed;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin sticky {
+  position: sticky;
+}
+
+@mixin top-n($number) {
+  top: calc(var(--spacing) * #{$number});
+}
+
+@mixin right-n($number) {
+  right: calc(var(--spacing) * #{$number});
+}
+
+@mixin bottom-n($number) {
+  bottom: calc(var(--spacing) * #{$number});
+}
+
+@mixin left-n($number) {
+  left: calc(var(--spacing) * #{$number});
+}
+
 /* flexbox & grid */
 @mixin flex-row {
   flex-direction: row;
