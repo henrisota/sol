@@ -321,6 +321,24 @@ body.blog {
   }
 }
 
+body.feed {
+  .entry-list {
+    @include flex;
+    @include flex-col;
+    @include justify-start;
+    @include items-start;
+    @include space-y(4);
+  }
+
+  .entry {
+    @include flex;
+    @include flex-col;
+    @include justify-start;
+    @include items-start;
+    @include space-y(2);
+  }
+}
+
 .header {
   @include my(2);
   @include space-y(6);

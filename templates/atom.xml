@@ -1,5 +1,6 @@
 {% import "macros.html" as macros %}
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="{{ get_url(path='/atom.xsl', trailing_slash=false) | safe }}" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
     <id>{{ feed_url | safe }}</id>
     <title>{{ config.title | striptags | safe }}</title>
