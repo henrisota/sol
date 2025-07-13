@@ -1,6 +1,7 @@
 +++
 title = "Code"
 date = 2025-07-06
+updated = 2025-07-13
 
 taxonomies.tags = [
   "code",
