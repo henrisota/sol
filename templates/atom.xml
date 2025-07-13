@@ -2,19 +2,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
     <id>{{ feed_url | safe }}</id>
-    <title>{{ config.title }}{% if term %} - {{ term.name }}{% endif %}</title>
+    <title>{{ config.title | striptags | safe }}</title>
     {% if config.description -%}
     <subtitle>{{ macros::description() }}</subtitle>
     {%- endif %}
 
+    {% set author = config.extra.author.name | default(value=config.author) %}
+    <author>
+      <name>{{ author }}</name>
+      {% if config.extra.author.email %}<email>{{ config.extra.author.email }}</email>{% endif %}
+    </author>
+    <rights type="text">Copyright © {{ last_updated | date(format="%Y") }} {{ author }}</rights>
+
     <updated>{{ last_updated | date(format="%+") }}</updated>
 
     <link rel="alternate" type="text/html" href="
-      {%- if section -%}
-    {{ section.permalink | escape_xml | safe }}
-      {%- else -%}
-    {{ config.base_url | escape_xml | safe }}
-      {%- endif -%}
+    {%- if term -%}
+      {{ term.permalink | escape_xml | safe }}
+    {%- elif section -%}
+      {{ section.permalink | escape_xml | safe }}
+    {%- else -%}
+      {{ config.base_url | escape_xml | safe }}
+    {%- endif -%}
     "/>
     <link rel="self" href="{{ feed_url | safe }}" type="application/atom+xml" />
 
@@ -23,22 +32,28 @@
         <id>{{ page.permalink | safe }}</id>
         <title>{{ page.title }}</title>
 
-        {% set authors = page.authors | concat(with=config.extra.author.name | default(value=config.author)) | unique(case_sensitive=false) %}
+        {% set authors = page.authors | concat(with=author) | unique(case_sensitive=false) %}
         {% for author in authors -%}
         <author>
-        <name>{{ author }}</name>
+          <name>{{ author }}</name>
         </author>
         {%- endfor %}
 
         <published>{{ page.date | date(format="%+") }}</published>
         <updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
 
-        <link href="{{ page.permalink | safe }}"/>
         <link rel="alternate" href="{{ page.permalink | safe }}" type="text/html"/>
 
-        {% if page.summary -%}
-        <summary type="html">{{ page.summary }}</summary>
-        {%- endif %}
+        {% if page.description %}
+        {% set summary = page.description %}
+        {% elif page.summary %}
+        {% set summary = page.summary %}
+        {% endif %}
+
+        {% if summary %}
+        <summary type="html">{{ summary }}</summary>
+        {% endif %}
+
         <content type="html">{{ page.content }}</content>
     </entry>
     {%- endfor %}
