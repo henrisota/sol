@@ -13,8 +13,8 @@ taxonomies = [
 
 build_search_index = false
 
-generate_feeds = true
-# feed_limit = 20
+generate_feeds = false
+# feed_limit = 0
 feed_filenames = ["atom.xml"]
 
 output_dir = "public"
