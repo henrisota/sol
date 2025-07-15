@@ -1,0 +1,1 @@
+ol,ul{width:100%;align-items:flex-start;list-style-position:inside}ol ol,ol ul,ul ol,ul ul{margin-left:calc(var(--spacing) * 8)}

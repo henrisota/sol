@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://henrisota.github.io/sol/atom.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <id>https://henrisota.github.io/sol/blog/atom.xml</id>
+    <title>sol</title>
+    <subtitle></subtitle>
+
+    
+    <author>
+      <name>Author</name>
+      
+    </author>
+    <rights type="text">Copyright © 2025 Author</rights>
+
+    <updated>2025-07-13T00:00:00+00:00</updated>
+
+    <link rel="alternate" type="text/html" href="https://henrisota.github.io/sol/blog/"/>
+    <link rel="self" href="https://henrisota.github.io/sol/blog/atom.xml" type="application/atom+xml" />
+
+    <entry xml:lang="en">
+        <id>https://henrisota.github.io/sol/blog/code/</id>
+        <title>Code</title>
+
+        
+        <author>
+          <name>Author</name>
+        </author>
+
+        <published>2025-07-06T00:00:00+00:00</published>
+        <updated>2025-07-13T00:00:00+00:00</updated>
+
+        <link rel="alternate" href="https://henrisota.github.io/sol/blog/code/" type="text/html"/>
+
+        
+
+        
+
+        <content type="html">&lt;h2 id=&quot;syntax-highlighting&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#syntax-highlighting&quot; aria-label=&quot;Anchor link for: syntax-highlighting&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Syntax Highlighting&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-rust&quot;&gt;fn&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-rust&quot;&gt;main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-rust&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; name &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;World&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-support z-macro z-rust&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Hello, &lt;span class=&quot;z-constant z-other z-placeholder z-rust&quot;&gt;{}&lt;&#x2F;span&gt;!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-rust&quot;&gt;,&lt;&#x2F;span&gt; name&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-end z-rust&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;line-numbering&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#line-numbering&quot; aria-label=&quot;Anchor link for: line-numbering&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Line Numbering&lt;&#x2F;h2&gt;
+&lt;pre data-linenos data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-keyword z-other z-rust&quot;&gt;use&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-path z-rust&quot;&gt;highlighter&lt;span class=&quot;z-punctuation z-accessor z-rust&quot;&gt;::&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;highlight&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; code &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;...&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;setting-first-line-number&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#setting-first-line-number&quot; aria-label=&quot;Anchor link for: setting-first-line-number&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Setting first line number&lt;&#x2F;h2&gt;
+&lt;pre data-linenos data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-keyword z-other z-rust&quot;&gt;use&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-path z-rust&quot;&gt;highlighter&lt;span class=&quot;z-punctuation z-accessor z-rust&quot;&gt;::&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;highlight&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; code &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;...&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;highlighting-lines&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#highlighting-lines&quot; aria-label=&quot;Anchor link for: highlighting-lines&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Highlighting lines&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;mark&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-keyword z-other z-rust&quot;&gt;use&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-path z-rust&quot;&gt;highlighter&lt;span class=&quot;z-punctuation z-accessor z-rust&quot;&gt;::&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;highlight&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;mark&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; code &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;...&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;mark&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;mark&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;hiding-lines&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#hiding-lines&quot; aria-label=&quot;Anchor link for: hiding-lines&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Hiding lines&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;naming-code-blocks&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#naming-code-blocks&quot; aria-label=&quot;Anchor link for: naming-code-blocks&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Naming code blocks&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;rust&quot; data-name=&quot;mod.rs&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot; data-name=&quot;mod.rs&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-keyword z-other z-rust&quot;&gt;use&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-path z-rust&quot;&gt;highlighter&lt;span class=&quot;z-punctuation z-accessor z-rust&quot;&gt;::&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;highlight&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; code &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;...&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;combined&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#combined&quot; aria-label=&quot;Anchor link for: combined&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Combined&lt;&#x2F;h2&gt;
+&lt;pre data-linenos data-lang=&quot;rust&quot; data-name=&quot;combined.rs&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot; data-name=&quot;combined.rs&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;6&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; code &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;...&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;&lt;mark&gt;7&lt;&#x2F;mark&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;mark&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-support z-function z-rust&quot;&gt;highlight&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;code&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;mark&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;8&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-keyword z-control z-rust&quot;&gt;return&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+    </entry><entry xml:lang="en">
+        <id>https://henrisota.github.io/sol/blog/text/</id>
+        <title>Text</title>
+
+        
+        <author>
+          <name>Author</name>
+        </author>
+
+        <published>2025-06-26T00:00:00+00:00</published>
+        <updated>2025-06-26T00:00:00+00:00</updated>
+
+        <link rel="alternate" href="https://henrisota.github.io/sol/blog/text/" type="text/html"/>
+
+        
+        
+        
+
+        
+        <summary type="html">Description</summary>
+        
+
+        <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac suscipit orci, vel consequat felis. Maecenas rutrum viverra venenatis. Donec elementum tincidunt eros vel sagittis. Donec maximus purus eu ornare consectetur. Nulla ornare nisi quis consectetur vestibulum. Mauris tempus viverra tellus, id ultrices nibh convallis sed. Integer nec condimentum justo. Donec malesuada ligula et tellus egestas, eget dignissim risus accumsan. Integer gravida iaculis nunc, a elementum enim eleifend ac.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Sed ornare arcu erat, et placerat metus efficitur in. Donec sit amet ex eget nibh ultrices commodo et at tortor. Donec pretium sem ut euismod congue. Duis tincidunt porta leo, ut scelerisque lectus gravida et. In suscipit odio ut urna suscipit, a ultricies massa finibus. Fusce non dictum felis. Nunc posuere velit ut rhoncus consequat. Praesent mattis risus eget diam lobortis ullamcorper. Ut sit amet sem bibendum, elementum metus nec, pulvinar tellus.&lt;&#x2F;p&gt;
+&lt;p&gt;Sed finibus in lacus eu maximus. Nulla sed nulla condimentum, elementum mi sit amet, imperdiet nisl. Quisque sodales, metus eu lacinia elementum, tortor purus venenatis nulla, non hendrerit urna augue sit amet lorem. Curabitur tempor odio erat, a luctus sapien efficitur et. Cras eu orci est. Vivamus ipsum tortor, ultrices et sollicitudin facilisis, pulvinar eget erat. Integer aliquam risus vel velit tincidunt, non scelerisque dui mollis. Morbi id felis id erat interdum tempor. Duis tempor neque sed leo semper, vitae fermentum enim tempus. Donec eget dolor libero.&lt;&#x2F;p&gt;
+&lt;p&gt;Phasellus eu nibh nulla. Integer eleifend condimentum justo quis pulvinar. Nullam ullamcorper, quam vitae laoreet feugiat, massa ipsum commodo massa, in rutrum neque diam at purus. Donec consectetur id eros ac varius. Donec consequat dui at elit pharetra, et sagittis diam sodales. Maecenas nec arcu placerat, vestibulum enim ac, hendrerit metus. Fusce et est massa. Nulla at est ac magna sagittis placerat. Nullam ipsum tortor, accumsan nec euismod non, consectetur non ante.&lt;&#x2F;p&gt;
+&lt;p&gt;Etiam dictum eget dui eu sodales. Nullam at lectus id velit pulvinar ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec scelerisque felis sem, a mollis odio sollicitudin ut. Mauris ullamcorper sagittis pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut dignissim sollicitudin felis, sed condimentum risus semper sed. Nunc orci ipsum, facilisis interdum sagittis at, accumsan condimentum magna. Aenean tincidunt a dui sit amet luctus. Nam vehicula urna nec dolor sagittis, quis mollis libero ullamcorper. Etiam eu massa quis felis imperdiet tempus quis ac neque. Suspendisse laoreet porttitor felis, in venenatis risus viverra vitae. Nulla consequat tempus porttitor. Nullam facilisis quam at erat consectetur ullamcorper.&lt;&#x2F;p&gt;
+</content>
+    </entry><entry xml:lang="en">
+        <id>https://henrisota.github.io/sol/blog/markdown/</id>
+        <title>Markdown</title>
+
+        
+        <author>
+          <name>Author</name>
+        </author>
+
+        <published>2025-06-09T00:00:00+00:00</published>
+        <updated>2025-06-09T00:00:00+00:00</updated>
+
+        <link rel="alternate" href="https://henrisota.github.io/sol/blog/markdown/" type="text/html"/>
+
+        
+
+        
+
+        <content type="html">&lt;h1 id=&quot;introduction&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;This post demonstrates &lt;strong&gt;CommonMark&lt;&#x2F;strong&gt; features.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;h2-heading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#h2-heading&quot; aria-label=&quot;Anchor link for: h2-heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+h2 Heading&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;h3-heading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#h3-heading&quot; aria-label=&quot;Anchor link for: h3-heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+h3 Heading&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;h4-heading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#h4-heading&quot; aria-label=&quot;Anchor link for: h4-heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+h4 Heading&lt;&#x2F;h4&gt;
+&lt;h5 id=&quot;h5-heading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#h5-heading&quot; aria-label=&quot;Anchor link for: h5-heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+h5 Heading&lt;&#x2F;h5&gt;
+&lt;h6 id=&quot;h6-heading&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#h6-heading&quot; aria-label=&quot;Anchor link for: h6-heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+h6 Heading&lt;&#x2F;h6&gt;
+&lt;h2 id=&quot;features&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#features&quot; aria-label=&quot;Anchor link for: features&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Features&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;paragraphs&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#paragraphs&quot; aria-label=&quot;Anchor link for: paragraphs&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Paragraphs&lt;&#x2F;h3&gt;
+&lt;p&gt;This is a paragraph.&lt;&#x2F;p&gt;
+&lt;p&gt;This is another paragraph.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;text&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#text&quot; aria-label=&quot;Anchor link for: text&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Text&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;strong&gt;Bold Text&lt;&#x2F;strong&gt;: Use &lt;code&gt;**text**&lt;&#x2F;code&gt; or &lt;code&gt;__text__&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Italic Text&lt;&#x2F;em&gt;: Use &lt;code&gt;*text*&lt;&#x2F;code&gt; or &lt;code&gt;_text_&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;del&gt;Strikethrough Text&lt;&#x2F;del&gt;: Use &lt;code&gt;~~text~~&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Inline Code&lt;&#x2F;code&gt;: Use &lt;code&gt;`code`&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;lists&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#lists&quot; aria-label=&quot;Anchor link for: lists&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Lists&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;ordered-lists&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ordered-lists&quot; aria-label=&quot;Anchor link for: ordered-lists&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Ordered Lists&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;First item&lt;&#x2F;li&gt;
+&lt;li&gt;Second item&lt;&#x2F;li&gt;
+&lt;li&gt;Third Item&lt;&#x2F;li&gt;
+&lt;li&gt;Fourth Item&lt;&#x2F;li&gt;
+&lt;li&gt;Fifth Item&lt;&#x2F;li&gt;
+&lt;li&gt;Sixth Item&lt;&#x2F;li&gt;
+&lt;li&gt;Seventh Item&lt;&#x2F;li&gt;
+&lt;li&gt;Eight Item&lt;&#x2F;li&gt;
+&lt;li&gt;Ninth Item&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;unordered-lists&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#unordered-lists&quot; aria-label=&quot;Anchor link for: unordered-lists&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Unordered Lists&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;First item&lt;&#x2F;li&gt;
+&lt;li&gt;Second item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;mixed-lists&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#mixed-lists&quot; aria-label=&quot;Anchor link for: mixed-lists&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Mixed Lists&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;First level first unordered item
+&lt;ol&gt;
+&lt;li&gt;Second level first ordered item&lt;&#x2F;li&gt;
+&lt;li&gt;Second level second ordered item
+&lt;ul&gt;
+&lt;li&gt;Third level first unordered item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;First level second unordered item&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;links&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#links&quot; aria-label=&quot;Anchor link for: links&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Links&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a class=&quot;&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.example.com&quot;&gt;Website&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;&quot; rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;www.example.com&quot;&gt;This is such a long link that it will break over to new lines based on the word-break attribute&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;images&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#images&quot; aria-label=&quot;Anchor link for: images&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Images&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;rust.png&quot; alt=&quot;Rust&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;blockquotes&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquotes&quot; aria-label=&quot;Anchor link for: blockquotes&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Blockquotes&lt;&#x2F;h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a single line blockquote example.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is also a blockquote example.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is yet another blockquote example.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a multiline blockquote example. It contains multiple paragraphs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h3 id=&quot;code-blocks&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#code-blocks&quot; aria-label=&quot;Anchor link for: code-blocks&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Code Blocks&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;text&quot; class=&quot;language-text z-code&quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;This is how code with no syntax highlighting looks like. This sentence keeps on going over the limit.
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Here is another sentence.
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;This is how multiline code looks like.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-rust&quot;&gt;fn&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-rust&quot;&gt;main&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-rust&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; name &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;World&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-support z-macro z-rust&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;Hello, &lt;span class=&quot;z-constant z-other z-placeholder z-rust&quot;&gt;{}&lt;&#x2F;span&gt;!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-rust&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-rust&quot;&gt;,&lt;&#x2F;span&gt; name&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-end z-rust&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;tables&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#tables&quot; aria-label=&quot;Anchor link for: tables&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Tables&lt;&#x2F;h3&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Bold&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td&gt;Makes text bold&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;em&gt;Italic&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td&gt;Makes text italic&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;Feature&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: center&quot;&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;&lt;strong&gt;Bold&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Makes text bold&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;&lt;em&gt;Italic&lt;&#x2F;em&gt;&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Makes text italic&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h3 id=&quot;horizontal-rules&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#horizontal-rules&quot; aria-label=&quot;Anchor link for: horizontal-rules&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Horizontal Rules&lt;&#x2F;h3&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;footnotes&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#footnotes&quot; aria-label=&quot;Anchor link for: footnotes&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+Footnotes&lt;&#x2F;h3&gt;
+&lt;p&gt;Here is a footnote. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here is another footnote. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; This is the next sentence.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the same footnote referenced again. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-2&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;footer class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;Here is a footnote. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;Footnotes &lt;em&gt;can be styled&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Footnotes can spawn multiple paragraphs. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-2-2&quot;&gt;↩2&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;footer&gt;
+</content>
+    </entry>
+</feed>
