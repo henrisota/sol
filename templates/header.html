@@ -16,15 +16,21 @@
         {% if page %}
         {% set section = get_section(path=page.ancestors | last) %}
         {% endif %}
+        {% set url = get_url(path=part.path, trailing_slash=false) | safe %}
         {% if section and section.extra and section.extra.part == part.path %}
-        <a class="part active" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
+        <a class="part active" href="{{ url }}">{{ part.name }}</a>
         {% else %}
-        <a class="part" href="{{ get_url(path=part.path) }}">{{ part.name }}</a>
+        <a class="part" href="{{ url }}">{{ part.name }}</a>
         {% endif %}
     {% endfor %}
     </section>
     {% endif %}
-    <div id="mode" data-default="/icons/globe.svg" data-dark="/icons/moon.svg" data-light="/icons/sun.svg">
+    <div
+        id="mode"
+        data-default="{{ get_url(path='icons/globe.svg', trailing_slash=false) | safe }}"
+        data-dark="{{ get_url(path='icons/moon.svg', trailing_slash=false) | safe }}"
+        data-light="{{ get_url(path='icons/sun.svg', trailing_slash=false) | safe }}"
+    >
         <div id="toggle"></div>
     </div>
 </div>
