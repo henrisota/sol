@@ -2,18 +2,43 @@
   outputDirectory = "public";
 in {
   packages = with pkgs; [
+    git
     zola
   ];
 
   scripts = {
     build.exec = ''
-      zola build --output-dir ${outputDirectory}
+      zola build --output-dir ${outputDirectory} "$@"
     '';
     check.exec = ''
       zola check
     '';
     clean.exec = ''
       rm -rf ${outputDirectory}
+    '';
+    deploy.exec = ''
+      echo "Configure deployment"
+
+      git config --global url."https://".insteadOf git://
+      git config --global url."$GITHUB_SERVER_URL/".insteadOf "git@github.com":
+      git config --global --add safe.directory '*'
+      git config --global init.defaultBranch main
+
+      cd ${outputDirectory}
+
+      touch .nojekyll
+
+      git init
+      git config user.name "GitHub Actions"
+      git config user.email "github-actions-bot@users.noreply.github.com"
+      git add .
+
+      echo "Deploy"
+
+      git commit -m "Deploy ''${GITHUB_REPOSITORY}"
+      git push --force "https://''${GITHUB_ACTOR}:''${GITHUB_TOKEN}@github.com/''${GITHUB_REPOSITORY}.git" main:pages
+
+      echo "Deployed"
     '';
     serve.exec = ''
       zola serve --interface 127.0.0.1 --port 2000 --open
