@@ -15,11 +15,30 @@ defaults:
     shell: devenv shell bash -- -e {0}
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Prepare
         uses: ./.github/actions/prepare
+      - name: Fetch repository name
+        run: echo "REPOSITORY_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
+      - name: Configure base url
+        run: echo "BASE_URL=https://${{ github.repository_owner }}.github.io/${{ env.REPOSITORY_NAME }}" >> $GITHUB_ENV
       - name: Build
-        run: build
+        run: |
+          if [[ "$DEPLOY" ]]; then
+            echo "Build with base url set to $BASE_URL"
+            build --base-url "$BASE_URL"
+          else
+            echo "Build with default base url"
+            build
+          fi
+      - name: Deploy
+        if: ${{ env.DEPLOY }}
+        run: deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
