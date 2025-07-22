@@ -12,7 +12,7 @@ class ModeConfigurator {
 
     this.toggleElement.addEventListener("click", () => this.toggleMode());
 
-    this.setMode(this.getMode());
+    this.sync();
   }
 
   getMode() {
@@ -20,9 +20,9 @@ class ModeConfigurator {
     return stored ?? "default";
   }
 
-  async setMode(mode) {
+  setMode(mode) {
     localStorage.setItem("mode", mode);
-    await this.sync();
+    this.sync();
     return mode;
   }
 
@@ -32,20 +32,8 @@ class ModeConfigurator {
     await this.setMode(mode);
   }
 
-  async sync() {
+  sync() {
     const current = this.getMode();
-    const source = this.modeElement.dataset[current];
-
-    if (!this.cache[source]) {
-      const response = await fetch(source);
-      if (!response.ok) {
-        return;
-      }
-      this.cache[source] = await response.text();
-    }
-
-    this.toggleElement.innerHTML = this.cache[source];
-
     const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     const mode = current != "default" ? current : preferred;
 
@@ -54,6 +42,25 @@ class ModeConfigurator {
 
     this.darkSyntax.media = mode === "light" ? "not all" : "all";
     this.lightSyntax.media = mode === "light" ? "all" : "not all";
+
+    const source = this.modeElement.dataset[current];
+
+    if (!this.cache[source]) {
+      fetch(source)
+        .then((response) => {
+          if (!response.ok) {
+            return Promise.reject();
+          }
+          return response.text();
+        })
+        .then((text) => {
+          this.cache[source] = text;
+          this.toggleElement.innerHTML = this.cache[source];
+        })
+        .catch(() => {});
+    } else {
+      this.toggleElement.innerHTML = this.cache[source];
+    }
   }
 }
 
