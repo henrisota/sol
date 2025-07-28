@@ -245,22 +245,14 @@ body.blog {
 
       .metadata {
         @include flex;
+        @include flex-wrap;
         @include flex-row;
         @include justify-start;
         @include items-center;
+        @include space-x(2);
 
-        * {
-          @include px(2);
-          border-right: 1px solid var(--text-muted);
-        }
-
-        *:first-child {
-          @include pl(0);
-        }
-
-        *:last-child {
-          @include pr(0);
-          border-right: none;
+        .separator {
+          color: var(--text-muted);
         }
       }
 
