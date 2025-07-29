@@ -128,7 +128,8 @@ strong {
 
   box-sizing: border-box;
 
-  @include m(4);
+  @include mx(4);
+  @include my(6);
   @include space-y(6);
 
   // Shift content horizontally due to appearance of vertical scrollbar
