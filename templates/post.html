@@ -42,7 +42,8 @@
             {% endfor %}
         </div>
         {% endif %}
-        {% if page.toc %}
+        {% set section = get_section(path=page.ancestors | last) %}
+        {% if section.extra.toc and page.toc %}
         <div class="toc">
             <nav>
                 {% for h1 in page.toc %}
