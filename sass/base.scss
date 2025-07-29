@@ -371,24 +371,6 @@ body.feed {
       color: var(--text-primary);
     }
   }
-
-  #mode {
-    @include absolute;
-    @include top-n(4);
-    @include right-n(4);
-
-    #toggle {
-      @include flex;
-      @include flex-col;
-      @include justify-center;
-      @include items-center;
-      @include w-n(4);
-      @include h-n(4);
-
-      cursor: pointer;
-      color: var(--text-primary);
-    }
-  }
 }
 
 .icon {
