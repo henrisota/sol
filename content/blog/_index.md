@@ -22,7 +22,7 @@ paginate_reversed = false
 
 insert_anchor_links = "left"
 
-generate_feeds = true
+generate_feeds = false
 
 [extra]
 part = "blog"

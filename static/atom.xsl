@@ -17,7 +17,7 @@
 					<xsl:value-of select="atom:feed/atom:title" />
 				</title>
 				<meta name="color-scheme" content="light dark" />
-				<link rel="stylesheet" href="/styles.css" />
+				<link rel="stylesheet" href="styles.css" />
 			</head>
 			<body class="feed">
 				<div class="container">
