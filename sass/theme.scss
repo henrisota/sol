@@ -15,6 +15,14 @@
   --base0D: #1e66f5; /* Blue (Links, Informational Elements) */
   --base0E: #8839ef; /* Magenta (Keywords, Prominent Elements) */
   --base0F: #dd7878; /* Brown (Optional Accent Color) */
+  --base10: #e6e9ef; /* Darker Background */
+  --base11: #dce0e8; /* Darkest Background */
+  --base12: #e64553; /* Bright Red */
+  --base13: #dc8a78; /* Bright Yellow */
+  --base14: #40a02b; /* Bright Green */
+  --base15: #04a5e5; /* Bright Cyan */
+  --base16: #209fb5; /* Bright Blue */
+  --base17: #ea76cb; /* Bright Purple */
 }
 
 @mixin dark {
@@ -34,6 +42,14 @@
   --base0D: #89b4fa; /* Blue (Links, Informational Elements) */
   --base0E: #cba6f7; /* Magenta (Keywords, Prominent Elements) */
   --base0F: #f2cdcd; /* Brown (Optional Accent Color) */
+  --base10: #181825; /* Darker Background */
+  --base11: #11111b; /* Darkest Background */
+  --base12: #eba0ac; /* Bright Red */
+  --base13: #f5e0dc; /* Bright Yellow */
+  --base14: #a6e3a1; /* Bright Green */
+  --base15: #89dceb; /* Bright Cyan */
+  --base16: #74c7ec; /* Bright Blue */
+  --base17: #f5c2e7; /* Bright Purple */
 }
 
 @media (prefers-color-scheme: light) {
@@ -65,6 +81,15 @@
   --link: var(--base0D); /* Links */
   --keyword: var(--base0E); /* Keywords or Prominent Items */
   --accent-brown: var(--base0F); /* Optional Accent */
+
+  --background-dark: var(--base10); /* Darker Background */
+  --background-darkest: var(--base11); /* Darkest Background */
+  --accent-bright-red: var(--base12); /* Bright Red Accent */
+  --accent-bright-yellow: var(--base13); /* Bright Yellow Accent */
+  --accent-bright-green: var(--base14); /* Bright Green Accent */
+  --accent-bright-cyan: var(--base15); /* Bright Cyan Accent */
+  --accent-bright-blue: var(--base16); /* Bright Blue Accent */
+  --accent-bright-purple: var(--base17); /* Bright Purple Accent */
 
   --text: var(--text-primary);
 
