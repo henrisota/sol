@@ -350,7 +350,7 @@ body.feed {
 
     .name {
       @include text-center;
-      font-size: 2rem;
+      font-size: 2.5rem;
       @include font-medium;
 
       * {
@@ -370,6 +370,7 @@ body.feed {
     @include justify-center;
     @include items-center;
     @include space-x(3);
+    @include text-xl;
 
     .part {
       color: var(--text-secondary);
