@@ -59,7 +59,7 @@
 					<xsl:value-of select="atom:title" disable-output-escaping="yes" />
 				</a>
 			</h3>
-			<p>
+			<p class="metadata">
 				<time>
 					<xsl:attribute name="datetime">
 						<xsl:value-of select="atom:published" />
@@ -87,7 +87,6 @@
 					<xsl:value-of select="atom:summary"  disable-output-escaping="yes" />
 				</p>
 			</xsl:if>
-
 		</div>
 	</xsl:template>
 

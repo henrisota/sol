@@ -178,11 +178,11 @@ body.taxonomy {
         }
 
         .count {
-          color: var(--text-muted);
+          color: var(--text-secondary);
         }
 
         .last-published-date {
-          color: var(--text-muted);
+          color: var(--text-secondary);
         }
       }
     }
@@ -200,7 +200,7 @@ body.taxonomy {
         }
 
         .date {
-          color: var(--text-muted);
+          color: var(--text-secondary);
         }
       }
     }
@@ -223,7 +223,7 @@ body.blog {
 
         .date {
           @include text-left;
-          color: var(--text-muted);
+          color: var(--text-secondary);
         }
 
         .title {
@@ -251,6 +251,9 @@ body.blog {
         @include justify-start;
         @include items-center;
         @include space-x(2);
+
+        color: var(--text-primary);
+        opacity: var(--metadata-opacity);
 
         .separator {
           color: var(--text-muted);
@@ -320,7 +323,7 @@ body.feed {
     @include flex-col;
     @include justify-start;
     @include items-start;
-    @include space-y(4);
+    @include space-y(6);
   }
 
   .entry {
@@ -329,6 +332,11 @@ body.feed {
     @include justify-start;
     @include items-start;
     @include space-y(2);
+
+    .metadata {
+      color: var(--text-primary);
+      opacity: var(--metadata-opacity);
+    }
   }
 }
 

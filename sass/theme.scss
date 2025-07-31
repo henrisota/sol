@@ -92,6 +92,7 @@
   --accent-bright-purple: var(--base17); /* Bright Purple Accent */
 
   --text: var(--text-primary);
+  --metadata-opacity: 0.75;
 
   &.light {
     @include light;
