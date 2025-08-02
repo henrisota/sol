@@ -17,6 +17,7 @@ pre {
   @include block;
   @include w-full;
   @include py(4);
+  @include relative;
 
   overflow-x: auto;
 
@@ -27,6 +28,31 @@ pre {
 
     content: "> " attr(data-name);
     color: var(--text-primary);
+  }
+
+  .copy {
+    @include hidden;
+    @include absolute;
+
+    @include top-n(4);
+    @include right-n(4);
+    @include mt(1.5);
+    @include mr(1.5);
+
+    @include w-n(5);
+    @include h-n(5);
+
+    border: none;
+
+    background: transparent;
+    color: var(--text-primary);
+
+    cursor: pointer;
+
+    &.copied,
+    &:hover {
+      display: block;
+    }
   }
 
   code {
@@ -81,6 +107,12 @@ pre {
           @include pl(2);
         }
       }
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover .copy {
+      display: block;
     }
   }
 }

@@ -69,6 +69,12 @@
         </header>
         {% block content %}{% endblock content %}
     </div>
+
+    {% set copy_icon = load_data(path="icons/copy.svg") %}
+    {% set check_icon = load_data(path="icons/check.svg") %}
+    <div id="code-configuration" style="display: none;" data-copy-icon="{{ copy_icon }}" data-check-icon="{{ check_icon }}"></div>
+
+    <script src="{{ get_url(path="main.js") | safe }}" type="module" defer></script>
     <script src="{{ get_url(path="instantpage.min.js") | safe }}" type="module" defer></script>
     {% block script %}{% endblock script %}
 </body>
