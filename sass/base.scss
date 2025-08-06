@@ -169,19 +169,17 @@ body.taxonomy {
       .term-item {
         @include contents;
 
-        * {
-          @include text-right;
-        }
-
         .name {
           @include text-left;
         }
 
         .count {
+          @include text-right;
           color: var(--text-secondary);
         }
 
         .last-published-date {
+          @include text-right;
           color: var(--text-secondary);
         }
       }
