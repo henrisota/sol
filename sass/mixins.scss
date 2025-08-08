@@ -119,6 +119,18 @@
   left: calc(var(--spacing) * #{$number});
 }
 
+@mixin visible {
+  visibility: visible;
+}
+
+@mixin invisible {
+  visibility: hidden;
+}
+
+@mixin collapse {
+  visibility: collapse;
+}
+
 /* flexbox & grid */
 @mixin flex-row {
   flex-direction: row;

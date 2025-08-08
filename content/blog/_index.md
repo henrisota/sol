@@ -20,7 +20,7 @@ paginate_by = 0
 paginate_path = ""
 paginate_reversed = false
 
-insert_anchor_links = "left"
+insert_anchor_links = "right"
 
 generate_feeds = false
 
