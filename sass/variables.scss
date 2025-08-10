@@ -17,9 +17,10 @@ $xxl-breakpoint: 1400px;
 
   --line-height: 1;
 
-  --font-family: Lato, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mono-font-family: Menlo, Monaco, "Courier New", monospace;
-  --font-size: 16px;
+  --main-font-family: ui-sans-serif, system-ui, sans-serif;
+  --mono-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --main-font-size: 16px;
+  --mono-font-size: 14px;
 
   --text-xs: 0.75rem;
   --text-xs--line-height: calc(1 / 0.75);

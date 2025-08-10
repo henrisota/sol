@@ -20,8 +20,8 @@ body {
 
   background-color: var(--background);
 
-  font-size: var(--font-size);
-  font-family: var(--font-family);
+  font-size: var(--main-font-size);
+  font-family: var(--main-font-family);
   @include font-normal;
 
   color: var(--text-primary);
@@ -49,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include font-bold;
+  @include font-medium;
 }
 
 h1 {
@@ -115,7 +115,7 @@ table {
 }
 
 strong {
-  @include font-bold;
+  @include font-medium;
 }
 
 ::selection {
@@ -178,7 +178,7 @@ body.taxonomy {
 
     > .name {
       @include text-2xl;
-      @include font-bold;
+      @include font-medium;
     }
 
     .term-list {
@@ -259,7 +259,7 @@ body.blog {
 
       .title {
         @include text-2xl;
-        @include font-bold;
+        @include font-medium;
       }
 
       .metadata {
@@ -274,6 +274,7 @@ body.blog {
         opacity: var(--metadata-opacity);
 
         .separator {
+          user-select: none;
           color: var(--text-muted);
         }
       }
@@ -374,7 +375,6 @@ body.feed {
     @include justify-center;
     @include items-center;
     @include space-x(3);
-    @include text-xl;
 
     .part {
       color: var(--text-secondary);

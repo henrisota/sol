@@ -43,11 +43,9 @@
         </div>
         {% endif %}
         {% set section = get_section(path=page.ancestors | last) %}
-        <hr>
         <div class="content" itemprop="articleBody">
             {{ page.content | safe }}
         </div>
-        <hr>
     </article>
 </main>
 <footer>

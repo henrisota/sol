@@ -4,7 +4,7 @@ pre,
 code {
   background-color: var(--background-light);
   font-family: var(--mono-font-family);
-  font-size: var(--font-size);
+  font-size: var(--mono-font-size);
 }
 
 code {
@@ -24,7 +24,7 @@ pre {
   &[data-name]::before {
     @include block;
     @include px(4);
-    @include font-bold;
+    @include font-medium;
 
     content: "> " attr(data-name);
     color: var(--text-primary);
