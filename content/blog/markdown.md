@@ -11,8 +11,6 @@ taxonomies.categories = [
 ]
 +++
 
-# Introduction
-
 This post demonstrates **CommonMark** features.
 
 ## h2 Heading

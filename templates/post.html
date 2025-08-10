@@ -43,20 +43,6 @@
         </div>
         {% endif %}
         {% set section = get_section(path=page.ancestors | last) %}
-        {% if section.extra.toc and page.toc %}
-        <div class="toc">
-            <nav>
-                {% for h1 in page.toc %}
-                    <div class="first"><a href="#{{ h1.id | safe }}">{{ h1.title }}</a></div>
-                    {% if h1.children %}
-                        {% for h2 in h1.children %}
-                        <div class="second"><a href="#{{ h2.id | safe }}">{{ h2.title }}</a></div>
-                        {% endfor %}
-                    {% endif %}
-                {% endfor %}
-            </nav>
-        </div>
-        {% endif %}
         <hr>
         <div class="content" itemprop="articleBody">
             {{ page.content | safe }}
@@ -77,3 +63,15 @@
     {% endif %}
 </footer>
 {% endblock content %}
+
+{% block aside_content %}
+{% if section.extra.toc and page.toc %}
+    <div class="toc">
+        <nav>
+            {% for heading in page.toc %}
+                <div><a href="#{{ heading.id | safe }}">{{ heading.title }}</a></div>
+            {% endfor %}
+        </nav>
+    </div>
+{% endif %}
+{% endblock aside_content %}

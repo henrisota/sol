@@ -133,15 +133,35 @@ strong {
   @include my(6);
   @include space-y(6);
 
-  // Shift content horizontally due to appearance of vertical scrollbar
-  margin-left: calc(6 * var(--spacing) + 100vw - 100%);
-
   @include mq-min(sm) {
     width: variables.$sm-breakpoint;
   }
 
   @include mq-min(md) {
     width: variables.$md-breakpoint;
+  }
+
+  @include mq-min(xl) {
+    // Shift content horizontally accounting for aside content and vertical scrollbar
+    margin-left: calc(6 * var(--spacing) + 100vw - 100% + variables.$md-breakpoint / 4);
+  }
+
+  @include mq-max(xl) {
+    // Shift content horizontally accounting for vertical scrollbar
+    margin-left: calc(6 * var(--spacing) + 100vw - 100%);
+  }
+}
+
+.aside {
+  @include h-full;
+  width: variables.$md-breakpoint / 4;
+
+  @include sticky;
+  @include top-n(4);
+  @include mt(44);
+
+  @include mq-max(xl) {
+    @include hidden;
   }
 }
 
@@ -266,20 +286,6 @@ body.blog {
         @include space-x(1);
       }
 
-      .toc {
-        nav {
-          @include flex;
-          @include flex-col;
-          @include justify-start;
-          @include items-start;
-          @include space-y(2);
-
-          .second {
-            @include pl(4);
-          }
-        }
-      }
-
       .content {
         @include flex;
         @include flex-col;
@@ -377,6 +383,24 @@ body.feed {
     .part.active {
       @include underline;
       color: var(--text-primary);
+    }
+  }
+}
+
+.toc {
+  nav {
+    @include flex;
+    @include flex-col;
+    @include justify-start;
+    @include items-start;
+    @include space-y(2);
+
+    * {
+      color: var(--text-secondary);
+
+      :hover {
+        color: var(--text-primary);
+      }
     }
   }
 }

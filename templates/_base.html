@@ -68,6 +68,7 @@
         </header>
         {% block content %}{% endblock content %}
     </div>
+    <div class="aside">{% block aside_content %}{% endblock aside_content %}</div>
 
     {% set copy_icon = load_data(path="icons/copy.svg") %}
     {% set check_icon = load_data(path="icons/check.svg") %}
