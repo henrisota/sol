@@ -52,19 +52,9 @@
   --base17: #f5c2e7; /* Bright Purple */
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not(.light):not(.dark) {
-    @include light;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light):not(.dark) {
-    @include dark;
-  }
-}
-
 :root {
+  @include light;
+
   --background: var(--base00); /* Main Background */
   --background-light: var(--base01); /* Secondary/Lighter Background */
   --selection-background: var(--base02); /* Selection Highlight */
@@ -93,12 +83,4 @@
 
   --text: var(--text-primary);
   --metadata-opacity: 0.75;
-
-  &.light {
-    @include light;
-  }
-
-  &.dark {
-    @include dark;
-  }
 }

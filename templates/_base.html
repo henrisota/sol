@@ -55,8 +55,7 @@
         {% endif %}
     {% endif %}
 
-    <link id="light-syntax" rel="stylesheet" type="text/css" href="{{ get_url(path='syntax-theme-light.css', trailing_slash=false) | safe }}" media="(prefers-color-scheme: light)">
-    <link id="dark-syntax" rel="stylesheet" type="text/css" href="{{ get_url(path='syntax-theme-dark.css', trailing_slash=false) | safe }}" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path='syntax-theme-light.css', trailing_slash=false) | safe }}">
     <link rel="stylesheet" href="{{ get_url(path='styles.css', trailing_slash=false) | safe }}">
 
     {% block head -%}{%- endblock head %}
