@@ -129,19 +129,18 @@ strong {
 
   box-sizing: border-box;
 
-  @include mx(4);
+  @include mx(6);
   @include my(6);
   @include space-y(6);
 
   // Shift content horizontally due to appearance of vertical scrollbar
-  padding-left: calc(100vw - 100% + 2 * var(--spacing));
-  padding-right: calc(2 * var(--spacing));
+  margin-left: calc(6 * var(--spacing) + 100vw - 100%);
 
-  @include mq(sm) {
+  @include mq-min(sm) {
     width: variables.$sm-breakpoint;
   }
 
-  @include mq(md) {
+  @include mq-min(md) {
     width: variables.$md-breakpoint;
   }
 }
