@@ -255,36 +255,43 @@ body.blog {
       @include flex-col;
       @include justify-start;
       @include items-start;
-      @include space-y(4);
+      @include space-y(6);
 
-      .title {
-        @include text-2xl;
-        @include font-medium;
-      }
-
-      .metadata {
+      .header {
         @include flex;
-        @include flex-wrap;
-        @include flex-row;
+        @include flex-col;
         @include justify-start;
-        @include items-center;
-        @include space-x(2);
-
-        color: var(--text-primary);
-        opacity: var(--metadata-opacity);
-
-        .separator {
-          user-select: none;
-          color: var(--text-muted);
+        @include items-start;
+        @include space-y(4);
+        .title {
+          @include text-2xl;
+          @include font-medium;
         }
-      }
 
-      .tags {
-        @include flex;
-        @include flex-row;
-        @include justify-start;
-        @include items-center;
-        @include space-x(1);
+        .metadata {
+          @include flex;
+          @include flex-wrap;
+          @include flex-row;
+          @include justify-start;
+          @include items-center;
+          @include space-x(2);
+
+          color: var(--text-primary);
+          opacity: var(--metadata-opacity);
+
+          .separator {
+            user-select: none;
+            color: var(--text-muted);
+          }
+        }
+
+        .tags {
+          @include flex;
+          @include flex-row;
+          @include justify-start;
+          @include items-center;
+          @include space-x(1);
+        }
       }
 
       .content {

@@ -19,29 +19,31 @@
 {% block content %}
 <main>
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="title" itemprop="name headline">{{ page.title }}</div>
-        <div class="metadata">
-            {% if page.date %}
-            <time datetime="{{ macros::datetime(date=page.date) }}" itemprop="datePublished">Published on {{ macros::format_date(date=page.date) }}</time>
-            <div class="separator">|</div>
+        <div class="header">
+            <div class="title" itemprop="name headline">{{ page.title }}</div>
+            <div class="metadata">
+                {% if page.date %}
+                <time datetime="{{ macros::datetime(date=page.date) }}" itemprop="datePublished">Published on {{ macros::format_date(date=page.date) }}</time>
+                <div class="separator">|</div>
+                {% endif %}
+                {% if page.updated %}
+                <time datetime="{{ macros::datetime(date=page.updated) }}" itemprop="dateModified">Updated on {{ macros::format_date(date=page.updated) }}</time>
+                <div class="separator">|</div>
+                {% endif %}
+                <div class="word-count" itemprop="wordCount">{{ page.word_count }} word{{ page.word_count | pluralize }}</div>
+                <div class="separator">|</div>
+                <div class="reading-time" itemprop="timeRequired">{{ page.reading_time }} minute{{ page.reading_time | pluralize }} read</div>
+            </div>
+            {% if page.taxonomies and page.taxonomies.tags %}
+            <div class="tags">
+                {% set tags = page.taxonomies.tags | sort %}
+                {% for tag in page.taxonomies.tags %}
+                    {% set tag_slugify = tag | slugify %}
+                    <div class="tag"><a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}">#{{ tag }}</a></div>
+                {% endfor %}
+            </div>
             {% endif %}
-            {% if page.updated %}
-            <time datetime="{{ macros::datetime(date=page.updated) }}" itemprop="dateModified">Updated on {{ macros::format_date(date=page.updated) }}</time>
-            <div class="separator">|</div>
-            {% endif %}
-            <div class="word-count" itemprop="wordCount">{{ page.word_count }} word{{ page.word_count | pluralize }}</div>
-            <div class="separator">|</div>
-            <div class="reading-time" itemprop="timeRequired">{{ page.reading_time }} minute{{ page.reading_time | pluralize }} read</div>
         </div>
-        {% if page.taxonomies and page.taxonomies.tags %}
-        <div class="tags">
-            {% set tags = page.taxonomies.tags | sort %}
-            {% for tag in page.taxonomies.tags %}
-                {% set tag_slugify = tag | slugify %}
-                <div class="tag"><a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}">#{{ tag }}</a></div>
-            {% endfor %}
-        </div>
-        {% endif %}
         {% set section = get_section(path=page.ancestors | last) %}
         <div class="content" itemprop="articleBody">
             {{ page.content | safe }}
