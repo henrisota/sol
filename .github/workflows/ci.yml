@@ -5,6 +5,9 @@ on:
     branches:
       - main
   pull_request:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
 
 concurrency:
   group: "ci"
@@ -18,7 +21,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
-      DEPLOY: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      DEPLOY: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
