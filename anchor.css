@@ -1,0 +1,1 @@
+.zola-anchor{margin-left:calc(var(--spacing) * 2);visibility:hidden}.zola-anchor::after{content:"#"}h1:hover a.zola-anchor,h2:hover a.zola-anchor,h3:hover a.zola-anchor,h4:hover a.zola-anchor,h5:hover a.zola-anchor,h6:hover a.zola-anchor{visibility:visible}
