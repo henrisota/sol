@@ -1,11 +1,10 @@
-{% import "macros.html" as macros %}
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="{{ get_url(path='/atom.xsl', trailing_slash=false) | safe }}" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ lang }}">
     <id>{{ feed_url | safe }}</id>
     <title>{{ config.title | striptags | safe }}</title>
     {% if config.description -%}
-    <subtitle>{{ macros::description() }}</subtitle>
+    <subtitle>{{ <description /> }}</subtitle>
     {%- endif %}
 
     {% set author = config.extra.author.name | default(value=config.author) %}
@@ -15,7 +14,7 @@
     </author>
     <rights type="text">Copyright © {{ last_updated | date(format="%Y") }} {{ author }}</rights>
 
-    <updated>{{ last_updated | date(format="%+") }}</updated>
+    <updated>{{ last_updated | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
 
     <link rel="alternate" type="text/html" href="
     {%- if term -%}
@@ -33,15 +32,15 @@
         <id>{{ page.permalink | safe }}</id>
         <title>{{ page.title }}</title>
 
-        {% set authors = page.authors | concat(with=author) | unique(case_sensitive=false) %}
+        {% set authors = [...page.authors, author] | unique %}
         {% for author in authors -%}
         <author>
           <name>{{ author }}</name>
         </author>
         {%- endfor %}
 
-        <published>{{ page.date | date(format="%+") }}</published>
-        <updated>{{ page.updated | default(value=page.date) | date(format="%+") }}</updated>
+        <published>{{ page.date | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</published>
+        <updated>{{ (page.updated or page.date) | date(format="%Y-%m-%dT%H:%M:%S%:z") }}</updated>
 
         <link rel="alternate" href="{{ page.permalink | safe }}" type="text/html"/>
 

@@ -1,5 +1,3 @@
-{% import "macros.html" as macros %}
-
 <!DOCTYPE html>
 <html lang="{% block language %}{{ config.default_language }}{% endblock language %}">
 
@@ -10,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <meta name="description" content="{{ macros::description() }}">
+    <meta name="description" content="{{ <description /> }}">
     {% block keywords -%}
-    <meta name="keywords" content="{{ config.extra.information.keywords }}">
+    <meta name="keywords" content="{{ config.extra.information.keywords | join(sep=",") }}">
     {%- endblock keywords %}
 
     <meta name="author" content="{{ config.extra.author.name }}">
@@ -20,7 +18,7 @@
     <meta name="robots" content="noarchive, nocache, nofollow, noimageindex, noindex, nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
-    <meta property="og:description" content="{{ macros::description() }}">
+    <meta property="og:description" content="{{ <description /> }}">
     <meta property="og:image" content="{% if config.extra.image %}{{ get_url(path=config.extra.image) | safe }}{% endif %}">
     <meta property="og:site_name" content="{{ config.title }}">
     <meta property="og:title" content="{{ config.title }}">
@@ -42,9 +40,9 @@
     {% if config.generate_feeds %}
         {% if config.feed_filenames %}
             {% for feed in config.feed_filenames %}
-                {% if feed is containing("atom") %}
+                {% if feed is containing(pat="atom") %}
                     <link rel="alternate" type="application/atom+xml" title="atom feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
-                {% elif feed is containing("rss") %}
+                {% elif feed is containing(pat="rss") %}
                     <link rel="alternate" type="application/rss+xml" title="rss feed | {{ config.title | safe }}" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
                 {% else %}
                     <link rel="alternate" href="{{ get_url(path=feed, trailing_slash=false) | safe }}">
@@ -55,7 +53,7 @@
         {% endif %}
     {% endif %}
 
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path='syntax-theme-light.css', trailing_slash=false) | safe }}">
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path='giallo.css', trailing_slash=false) | safe }}">
     <link rel="stylesheet" href="{{ get_url(path='styles.css', trailing_slash=false) | safe }}">
 
     {% block head -%}{%- endblock head %}

@@ -5,7 +5,7 @@
 {% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
 
 {% block keywords -%}
-{% set part = config.extra.parts | filter(attribute="name", value=section.extra.part) | first %}
-{% set keywords = config.extra.information.keywords | concat(with=part.keywords) %}
+{% set part = [p for p in config.extra.parts if p.name == section.extra.part] | first %}
+{% set keywords = [...config.extra.information.keywords, ...part.keywords] %}
 <meta name="keywords" content="{{ keywords | join(sep=",") }}">
 {%- endblock keywords %}

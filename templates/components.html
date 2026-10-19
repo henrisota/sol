@@ -1,0 +1,21 @@
+{%- component description(@page = none, @section = none, @config) -%}
+  {%- if page -%}
+    {{- page.summary or page.description or "" -}}
+  {%- elif section -%}
+    {{- section.description or "" -}}
+  {%- else -%}
+    {{- config.description -}}
+  {%- endif -%}
+{%- endcomponent description -%}
+
+{%- component format_date(date, timezone = "", omit_current_year = true, @config) -%}
+  {%- set timezone = timezone or config.extra.timezone or "Etc/UTC" -%}
+  {%- set current_year = (date | date(format="%Y")) == (now() | date(format="%Y")) -%}
+  {%- set format = "%b %e" if omit_current_year and current_year else "%b %e, %Y" -%}
+  {{- date | date(format=format, timezone=timezone) -}}
+{%- endcomponent format_date -%}
+
+{%- component datetime(date, timezone = "", @config) -%}
+  {%- set timezone = timezone or config.extra.timezone or "Etc/UTC" -%}
+  {{- date | date(format="%Y-%m-%dT%H:%M:%S%:z", timezone=timezone) -}}
+{%- endcomponent datetime -%}

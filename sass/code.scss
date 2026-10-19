@@ -60,54 +60,34 @@ pre {
     @include py(0);
     @include px(4);
 
-    &:has(> mark, > span) {
+    &:has(> span) {
       @include pl(2);
       @include pr(4);
     }
 
-    > mark,
     > span {
       @include px(2);
     }
   }
 
-  mark {
-    @include block;
-    background-color: var(--background);
+  .giallo-l {
+    @include inline-block;
+    @include w-full;
+    min-height: 1lh;
+
+    &.z-hl {
+      background-color: var(--background);
+    }
   }
 
-  table {
-    @include w-full;
-
-    border: none;
-    border-collapse: collapse;
-
-    td {
-      @include p(0);
-      border: none;
-
-      &:nth-of-type(1) {
-        @include w-px;
-        @include text-right;
-        @include pr(2);
-        white-space: nowrap;
-        user-select: none;
-
-        mark {
-          background-color: var(--background-light);
-          color: var(--text-primary);
-        }
-      }
-
-      &:nth-of-type(2) {
-        @include text-left;
-
-        > mark,
-        > span {
-          @include pl(2);
-        }
-      }
-    }
+  .giallo-ln {
+    @include inline-block;
+    @include text-right;
+    @include pr(2);
+    @include mr(2);
+    min-width: 3ch;
+    user-select: none;
+    color: var(--text-primary);
   }
 
   @media (hover: hover) {

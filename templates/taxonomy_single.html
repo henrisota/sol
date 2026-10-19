@@ -12,7 +12,7 @@
     <div class="page-list">
         {% for page in term.pages %}
         <div class="page-item">
-            <div class="date">{{ macros::format_date(date=page.date) }}</div>
+            <div class="date">{{ <format_date date={page.date} /> }}</div>
             <div class="title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
         </div>
         {% endfor %}

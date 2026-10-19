@@ -6,7 +6,7 @@
 {%- block head -%}
 <meta property="og:type" content="article">
 {%-if page.date %}
-<meta property="article:published_time" content="{{ macros::datetime(date=page.date) }}">
+<meta property="article:published_time" content="{{ <datetime date={page.date} /> }}">
 {%- endif %}
 {% if page.lower -%}
 <link rel="prev" href="{{ page.lower.permalink | safe }}">
@@ -23,11 +23,11 @@
             <div class="title" itemprop="name headline">{{ page.title }}</div>
             <div class="metadata">
                 {% if page.date %}
-                <time datetime="{{ macros::datetime(date=page.date) }}" itemprop="datePublished">Published on {{ macros::format_date(date=page.date) }}</time>
+                <time datetime="{{ <datetime date={page.date} /> }}" itemprop="datePublished">Published on {{ <format_date date={page.date} /> }}</time>
                 <div class="separator">|</div>
                 {% endif %}
                 {% if page.updated %}
-                <time datetime="{{ macros::datetime(date=page.updated) }}" itemprop="dateModified">Updated on {{ macros::format_date(date=page.updated) }}</time>
+                <time datetime="{{ <datetime date={page.updated} /> }}" itemprop="dateModified">Updated on {{ <format_date date={page.updated} /> }}</time>
                 <div class="separator">|</div>
                 {% endif %}
                 <div class="word-count" itemprop="wordCount">{{ page.word_count }} word{{ page.word_count | pluralize }}</div>
@@ -44,7 +44,6 @@
             </div>
             {% endif %}
         </div>
-        {% set section = get_section(path=page.ancestors | last) %}
         <div class="content" itemprop="articleBody">
             {{ page.content | safe }}
         </div>
@@ -65,6 +64,7 @@
 {% endblock content %}
 
 {% block aside_content %}
+{% set section = get_section(path=page.ancestors | last) %}
 {% if section.extra.toc and page.toc %}
     <div class="toc">
         <nav>

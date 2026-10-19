@@ -32,14 +32,6 @@ exclude_paginated_pages_in_sitemap = "none"
 generate_robots_txt = true
 
 [markdown]
-highlight_theme = "css"
-highlight_themes_css = [
-    { theme = "catppuccin-mocha", filename = "syntax-theme-dark.css"},
-    { theme = "catppuccin-latte", filename = "syntax-theme-light.css"},
-]
-highlight_code = true
-error_on_missing_highlight = false
-
 definition_list = false
 
 insert_anchor_links = "none"
@@ -55,9 +47,12 @@ render_emoji = false
 lazy_async_image = false
 smart_punctuation = false
 
-extra_syntaxes_and_themes = [
-    "highlight_themes"
-]
+[markdown.highlighting]
+style = "class"
+theme = "catppuccin-latte"
+error_on_missing_language = false
+# Styles and the copy button read data-name and friends from <pre>
+data_attr_position = "pre"
 
 [link_checker]
 skip_prefixes = [

@@ -40,19 +40,9 @@ class Configurator {
     button.innerHTML = this.configuration.copyIcon;
 
     const handleCopy = () => {
-      let code = "";
-
-      if (block.dataset.linenos == undefined) {
-        code = block.textContent;
-      } else {
-        const table = block.querySelector("table");
-
-        const rows = Array.from(table.rows).map((row) => {
-          const cells = Array.from(row.cells).slice(1);
-          return cells.map((cell) => cell.textContent).join("");
-        });
-        code = rows.join("");
-      }
+      const content = block.querySelector("code").cloneNode(true);
+      content.querySelectorAll(".giallo-ln").forEach((number) => number.remove());
+      const code = content.textContent;
 
       navigator.clipboard.writeText(code).then(() => {
         button.innerHTML = this.configuration.checkIcon;
